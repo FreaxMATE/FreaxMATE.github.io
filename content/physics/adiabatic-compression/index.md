@@ -29,7 +29,7 @@ For us this is very convinient as we can now write the first law like this
 
 $$dU = dW$$
 
-The inner energy $U$ for an ideal gas is defined by
+The inner energy \\(U\\) for an ideal gas is defined by
 $$U = \frac{f}{2} N k_B T$$
 where \\(f\\) is the degree of freedom for the gas, 
 \\(N\\) the number of gas particles, \\(k_B\\) the Boltzmann constant and \\(T\\) the temperature of the gas.
