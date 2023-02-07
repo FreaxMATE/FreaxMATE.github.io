@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="390.50311"
+   height="345.32806"
+   viewBox="0 0 103.32073 91.368051"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="adiabatic-heating.svg"
+   inkscape:export-filename="piston.png"
+   inkscape:export-xdpi="150.78255"
+   inkscape:export-ydpi="150.78255"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.0724514"
+     inkscape:cx="280.66539"
+     inkscape:cy="84.386105"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3966"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m 56.029039,166.86059 c 0,0 2.867274,-1.93878 5.424327,-1.93878 2.557051,0 5.424322,1.93878 5.424322,1.93878 0,0 -2.867274,1.93878 -5.424327,1.93878 -2.557051,0 -5.424322,-1.93878 -5.424322,-1.93878 z"
+       copytype="single_stretched"
+       prop_scale="1.6735885"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3962"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3938"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m 56.029039,166.86059 c 0,0 2.867274,-1.93878 5.424327,-1.93878 2.557051,0 5.424322,1.93878 5.424322,1.93878 0,0 -2.867274,1.93878 -5.424327,1.93878 -2.557051,0 -5.424322,-1.93878 -5.424322,-1.93878 z"
+       copytype="single_stretched"
+       prop_scale="1.6735885"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3923"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3900"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m 56.029039,166.86059 c 0,0 2.867274,-1.93878 5.424327,-1.93878 2.557051,0 5.424322,1.93878 5.424322,1.93878 0,0 -2.867274,1.93878 -5.424327,1.93878 -2.557051,0 -5.424322,-1.93878 -5.424322,-1.93878 z"
+       copytype="single_stretched"
+       prop_scale="1.6735885"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3885"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3648"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m 56.029039,166.86059 c 0,0 2.867274,-2.6516 5.424327,-2.6516 2.557051,0 5.424322,2.6516 5.424322,2.6516 0,0 -2.867274,2.6516 -5.424327,2.6516 -2.557051,0 -5.424322,-2.6516 -5.424322,-2.6516 z"
+       copytype="single_stretched"
+       prop_scale="1.4990269"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3633"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3330"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m 56.029039,166.86059 c 0,0 2.867274,-2.6516 5.424327,-2.6516 2.557051,0 5.424322,2.6516 5.424322,2.6516 0,0 -2.867274,2.6516 -5.424327,2.6516 -2.557051,0 -5.424322,-2.6516 -5.424322,-2.6516 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect3262"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m 56.029039,166.86059 c 0,0 2.867274,-2.6516 5.424327,-2.6516 2.557051,0 5.424322,2.6516 5.424322,2.6516 0,0 -2.867274,2.6516 -5.424327,2.6516 -2.557051,0 -5.424322,-2.6516 -5.424322,-2.6516 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath393">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 60.260009,115.12229 95.954991,1.18547 0.90339,18.2014 -2.90571,0.99751 h -5.30771 v 7.73953 h 6.83996 v 20.84409 H 52.384608 v -49.36587 z"
+         id="path395" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-74.422169,-87.028897)">
+    <g
+       id="path4225"
+       transform="translate(-54.140739,16.083991)"
+       style="fill:#000000">
+      <path
+         style="color:#000000;fill:#000000;stroke-width:1.3;-inkscape-stroke:none"
+         d="m 157.85465,126.2294 h 26.57467"
+         id="path1518" />
+      <path
+         style="color:#000000;fill:#000000;-inkscape-stroke:none"
+         d="m 157.85547,125.58008 v 1.29883 h 26.57422 v -1.29883 z"
+         id="path1520" />
+      <g
+         id="g1508"
+         style="fill:#000000">
+        <g
+           id="path1510"
+           style="fill:#000000">
+          <path
+             style="color:#000000;fill:#000000;fill-rule:evenodd;stroke-width:0.65pt;-inkscape-stroke:none"
+             d="m 188.17982,126.2294 -5.6225,3.25 v -6.5 z"
+             id="path1514" />
+          <path
+             style="color:#000000;fill:#000000;fill-rule:evenodd;-inkscape-stroke:none"
+             d="m 182.12305,122.22852 v 8.00195 l 6.92187,-4.00195 -0.64844,-0.375 z m 0.86718,1.50195 4.32227,2.5 -4.32227,2.49805 z"
+             id="path1516" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="text4124-7"
+       style="font-size:10.5833px;line-height:1.25;stroke-width:0.264583"
+       transform="translate(5.378617,3.141212)" />
+    <rect
+       style="opacity:0.5;fill:#3584e4;stroke:#241f31;stroke-width:0.506577;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect4190"
+       width="34.274376"
+       height="24.586685"
+       x="-177.67488"
+       y="75.144302"
+       ry="0.79161513"
+       transform="rotate(-90)" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect234"
+       width="90.05014"
+       height="36.466496"
+       x="62.263958"
+       y="121.13348"
+       ry="1.1741081"
+       clip-path="url(#clipPath393)"
+       transform="matrix(0,-0.6697521,0.6697521,0,-5.9035289,219.29471)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="103.98354"
+       y="158.85463"
+       id="text4124-5"><tspan
+         sodipodi:role="line"
+         id="tspan4122-4"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.264583"
+         x="103.98354"
+         y="158.85463">T<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1207">1</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.264583"
+         x="103.98354"
+         y="172.08376"
+         id="tspan1211">V<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1209">1</tspan></tspan></text>
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.66119;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect457"
+       width="8.9584093"
+       height="23.131577"
+       x="-148.01836"
+       y="75.971672"
+       ry="0.74476504"
+       transform="rotate(-90)" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.705966;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect2407"
+       width="55.861366"
+       height="4.2290239"
+       x="-143.24319"
+       y="85.32312"
+       ry="0.13616146"
+       transform="rotate(-90)" />
+    <rect
+       style="opacity:0.75;fill:#ff7b00;fill-opacity:1;stroke:#241f31;stroke-width:0.190101;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect415"
+       width="4.7653255"
+       height="24.903162"
+       x="-177.83311"
+       y="138.48613"
+       ry="0.80180466"
+       transform="rotate(-90)" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect417"
+       width="90.05014"
+       height="36.466496"
+       x="62.263958"
+       y="121.13348"
+       ry="1.1741081"
+       clip-path="url(#clipPath393)"
+       transform="matrix(0,-0.6697521,0.6697521,0,57.596546,219.29471)" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.66119;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect459"
+       width="8.9584093"
+       height="23.131577"
+       x="-173.94792"
+       y="139.3719"
+       ry="0.74476504"
+       transform="rotate(-90)" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.705966;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect461"
+       width="55.861366"
+       height="4.2290239"
+       x="-169.17276"
+       y="148.82318"
+       ry="0.13616146"
+       transform="rotate(-90)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="167.48361"
+       y="158.85463"
+       id="text1288"><tspan
+         sodipodi:role="line"
+         id="tspan1282"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.264583"
+         x="167.48361"
+         y="158.85463">T<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1280">2</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:none;stroke-width:0.264583"
+         x="167.48361"
+         y="172.08376"
+         id="tspan1286">V<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1284">2</tspan></tspan></text>
+  </g>
+</svg>
