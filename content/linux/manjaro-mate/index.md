@@ -12,7 +12,7 @@ Hi there 👋,
 
 welcome to my new website, this is my first post here 🎉 - It is about a customized Manjaro MATE ISO I created.
 
-My favourite desktop environment currently is the MATE Desktop, however especially for new users it is not a very user-friendly implementation in most distributions. So I personally always configured the stock MATE experience to make it much more usable and polished. But actually you should not have to do so much to get an acceptable experience out of a desktop environment.
+My favorite desktop environment currently is the MATE Desktop, however especially for new users it is not a very user-friendly implementation in most distributions. So I personally always configured the stock MATE experience to make it much more usable and polished. But actually you should not have to do so much to get an acceptable experience out of a desktop environment.
 
 A Distribution doing a great job with their MATE Edition is Ubuntu MATE. I used to run this Distribution but much more prefer Manjaro/ Arch Linux as the backend. That's why I changed to Manjaro MATE and they're definitely better than some other Distribution with the MATE Desktop but not quite as good as Ubuntu MATE. So I created a customized Manjaro MATE ISO 🎉 🎊
 
@@ -65,9 +65,9 @@ Instead of the rather slow stock MATE search tool, the powerful [FSearch](https:
 
 For the security of you accounts the password manager [Secrets](https://gitlab.gnome.org/World/PasswordSafe) and [Seahorse](https://wiki.gnome.org/Apps/Seahorse/) is installed by default.
 
-The default shell is [Fish](https://fishshell.com/), to make the command line more approacheble for new Linux users and more efficient for all users.
+The default shell is [Fish](https://fishshell.com/), to make the command line more approachable for new Linux users and more efficient for all users.
 
-[MATE Layouts](https://github.com/FreaxMATE/mate-layouts) (based on [MATE Tweak](https://github.com/ubuntu-mate/mate-tweak)) lets you quickly switch between different panel layouts to get a user experience similiar to Windows, Mac, the old Unity or simply the productive Gnome 2 Layout which is the default one.
+[MATE Layouts](https://github.com/FreaxMATE/mate-layouts) (based on [MATE Tweak](https://github.com/ubuntu-mate/mate-tweak)) lets you quickly switch between different panel layouts to get a user experience similar to Windows, Mac, the old Unity or simply the productive Gnome 2 Layout which is the default one.
 
 ![Gnome 2 Layout](img/gnome.png)
 
