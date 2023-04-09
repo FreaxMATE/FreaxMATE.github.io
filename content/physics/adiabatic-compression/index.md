@@ -3,7 +3,7 @@ title: "Adiabatic Compression"
 date: 2023-02-02
 description: "How to derive the formulas of an adiabatic compression."
 summary: "How to derive the formulas of an adiabatic compression."
-tags: ["Adiabaic Process", "Ideal Gas law", "Thermodynamics", "First law of Thermodynamics", "Adiabatic", "Heat", "Inner Energy", "Work"]
+tags: ["Adiabatic Process", "Ideal Gas law", "Thermodynamics", "First law of Thermodynamics", "Adiabatic", "Heat", "Inner Energy", "Work"]
 coverCaption: "Photo by [Garett Mizunaka](https://unsplash.com/@garett3) on [Unsplash](https://unsplash.com/)"
 showAuthor: True
 
@@ -12,7 +12,7 @@ showAuthor: True
 {{< katex >}}
 ## Introduction
 
-Let's say we have some gas trapped inside a cylinder with a piston preventing it from leaking. Now if we want to change the inner energy of the gas we can - according to the first law of Thermodaynamics - either add/remove heat from the system or do work on the gas or let the gas do work on the environment.
+Let's say we have some gas trapped inside a cylinder with a piston preventing it from leaking. Now if we want to change the inner energy of the gas we can - according to the first law of Thermodynamics - either add/remove heat from the system or do work on the gas or let the gas do work on the environment.
 ![Piston](piston.svg)
 In a formula you can write the first law of Thermodynamics like this
 
@@ -24,7 +24,7 @@ where \\(dU\\) is the change of the inner energy of the gas, \\(dQ\\) is the amo
 
 ## Adiabatic process
 
-During an adiabatic process there is by definition no heat is exchanged with the environment. This can e.g. be approximately true for a very fast change in volume where there is almost no time to allow heat flow during this process.
+During an adiabatic process there is by definition no heat exchanged with the environment. This can e.g. be approximately true for a very fast change in volume where there is almost no time to allow heat flow during this process.
 For us this is very convenient as we can now write the first law like this
 
 $$dU = dW$$
