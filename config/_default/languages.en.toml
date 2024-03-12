@@ -14,7 +14,7 @@ dateFormat = "2 January 2006"
 [params]
   # mainSections = ["section1", "section2"]
 
-[author]
+[params.author]
    name = "Wilbur Wetterquarz"
    image = "img/author.jpg"
    headline = "Hey there 👋"
