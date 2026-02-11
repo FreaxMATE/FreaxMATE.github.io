@@ -74,3 +74,5 @@ format:
     highlight-style: github
     include-before-body:
       - file: _includes/download-button.html
+    include-in-header:
+      - file: _includes/pdf-script.html
