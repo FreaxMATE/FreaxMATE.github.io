@@ -5,7 +5,7 @@ description: "Comprehensive guide to using Jupyter notebooks with Quarto for int
 tags: ["Jupyter", "Python", "Data Science", "Interactive", "Notebooks", "Quarto"]
 execute:
   echo: true
-  eval: false
+  eval: true
 ---
 
 Quarto seamlessly integrates with Jupyter notebooks, allowing you to write computational documents that combine code, output, narrative text, and visualizations. This page showcases the power of Jupyter notebooks within Quarto!

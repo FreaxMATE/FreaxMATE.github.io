@@ -5,7 +5,7 @@ description: "Understanding Pinball Loss and its applications in quantile regres
 tags: ["Machine Learning", "Quantile Regression", "Loss Functions", "Statistics", "Python", "Jupyter"]
 execute:
   echo: true
-  eval: false
+  eval: true
 ---
 
 ## Introduction to Pinball Loss
@@ -35,7 +35,7 @@ $$L_\tau(y, \hat{y}) = (y - \hat{y})(\tau - \mathbb{1}_{y < \hat{y}})$$
 
 Let's create an interactive visualization of the pinball loss function:
 
-```python
+```{python}
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
@@ -85,7 +85,6 @@ ax.set_ylabel('Quantile Level (τ)', fontsize=12)
 ax.set_title('Loss Landscape Across Quantiles', fontsize=13, fontweight='bold')
 
 plt.tight_layout()
-plt.savefig('pinball_loss_visualization.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 print("✓ Pinball Loss visualization created successfully!")
@@ -95,7 +94,7 @@ print("✓ Pinball Loss visualization created successfully!")
 
 Let's demonstrate quantile regression on synthetic data:
 
-```python
+```{python}
 from scipy.optimize import minimize
 
 # Generate synthetic data
@@ -150,7 +149,6 @@ ax.legend(fontsize=10, loc='upper left')
 ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('quantile_regression_example.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 print("\nQuantile Regression Model Parameters:")
@@ -172,7 +170,7 @@ Pinball loss is particularly useful in:
 
 ## Comparison with Other Loss Functions
 
-```python
+```{python}
 # Compare pinball loss with MSE and MAE
 y_true = 0
 y_pred = np.linspace(-3, 3, 100)
@@ -208,7 +206,6 @@ ax.legend(fontsize=11)
 ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('loss_comparison.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 print("Loss function comparison plotted!")
