@@ -1,37 +1,22 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const pdfLink = document.getElementById('pdf-download-link');
   
   if (pdfLink) {
-    pdfLink.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Get the page title
-      const title = document.title || 'document';
-      
-      // Get the main content
-      const element = document.querySelector('main') || document.body;
-      
-      // Hide the download button while generating PDF
-      const downloadBtn = document.querySelector('.download-pdf-button');
-      downloadBtn.style.display = 'none';
-      
-      // Create PDF options
-      const opt = {
-        margin: 10,
-        filename: title + '.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
-      };
-      
-      // Generate and download PDF
-      html2pdf().set(opt).from(element).save().then(function() {
-        // Show the button again
-        downloadBtn.style.display = 'inline-block';
-      });
-    });
+    // Construct the PDF path based on current URL
+    let pdfPath = window.location.pathname
+      .replace(/\.html$/, '') // Remove .html
+      .replace(/\/$/, ''); // Remove trailing slash
+    
+    // Handle root/index pages
+    if (!pdfPath || pdfPath === '/') {
+      pdfPath = '/index';
+    }
+    
+    // Set the href to the pre-generated PDF
+    pdfPath = pdfPath + '.pdf';
+    pdfLink.href = pdfPath;
+    pdfLink.download = pdfPath.split('/').pop() || 'index.pdf';
   }
 });
 </script>

@@ -3,6 +3,8 @@ title: "Complete Guide to Quarto Features"
 date: 2024-02-11
 description: "Comprehensive showcase of Quarto's powerful features for technical documentation"
 toc: true
+format:
+  pdf
 ---
 
 Quarto is an open-source scientific and technical publishing system that brings computational documents, presentations, dashboards, and books. This page showcases its most powerful features!

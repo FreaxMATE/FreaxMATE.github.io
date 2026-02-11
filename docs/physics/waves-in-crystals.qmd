@@ -3,6 +3,8 @@ title: "Waves in Crystals"
 date: 2023-04-14
 description: "How do waves scatter in crystal structures. This article covers the basics of lattices, Miller indices, reciprocal lattice as well as the Laue conditions and the structure factor."
 tags: ["Structure", "Lattice", "Basis", "Wigner-Seitz Unit Cell", "Simple Cubic", "SC", "Face Centered Cubic", "FCC", "Body Centered Cubic", "BCC", "Miller Indices", "Reciprocal Lattice", "X-ray Scattering", "Interference", "Laue Conditions", "Waves in Crystal", "Structure Factor"]
+format:
+  pdf
 ---
 
 ## Introduction
@@ -13,7 +15,7 @@ To begin let's just define some basic principals that are important to understan
 
 ### Structure and Unit Cells
 
-![Lattice](waves-in-crystals-img/lattice.svg)
+![Lattice](waves-in-crystals-img/lattice.png)
 
 Points in space that are ordered in a specific way so you can describe the position of every point by a combination of lattice vectors
 
@@ -23,15 +25,15 @@ is called a **lattice**. The lattice vectors are not distinct and can be chosen 
 
 The lattice points are only points in space, to describe a **structure** we need to add a **basis** that contains the position of the atoms relative to the lattice. The basis can only contain the null-vector so that the atoms lie exactly on the lattice points. If we on the other hand had two basis vectors $\vec{p_1} = (0, 0)$ and $\vec{p_2} = (\frac{1}{2}, \frac{1}{2})$ we would get the following *structure*
 
-![Structure](waves-in-crystals-img/structure.svg)
+![Structure](waves-in-crystals-img/structure.png)
 
 One can define a unit cell for a lattice which then describes the whole lattice by translation of the cell, e.g. the following for a simple lattice
 
-![Unit Cell](waves-in-crystals-img/unit.svg)
+![Unit Cell](waves-in-crystals-img/unit.png)
 
 However there would have been many possibilities. There is a definition for a distinct cell that is the **Wigner-Seitz Unit Cell**. It consists of all points that are closer to the lattice point than to any other lattice point.
 
-![Wigner-Seitz Cell](waves-in-crystals-img/wigner.svg)
+![Wigner-Seitz Cell](waves-in-crystals-img/wigner.png)
 
 ### Common lattices
 
@@ -42,27 +44,27 @@ Now let's look at actual lattices in three dimensions. There are three basic one
 As the name suggests this lattice contains just the corners of a cube.
 The lattice vectors are $\vec{a_1} = (a, 0, 0)$, $\vec{a_2} = (0, a, 0)$ and $\vec{a_3} = (0, 0, a)$.
 
-![Simple Cubic](waves-in-crystals-img/sc.svg)
+![Simple Cubic](waves-in-crystals-img/sc.png)
 
 #### Face Centered Cubic (FCC) lattice
 
 Another important lattice similar to the SC-lattice but with additional lattice points at each face of the cube.
 The lattice vectors are $\vec{a_1} = (\frac{a}{2}, \frac{a}{2}, 0)$, $\vec{a_2} = (\frac{a}{2}, 0, \frac{a}{2})$ and $\vec{a_3} = (0, \frac{a}{2}, \frac{a}{2})$.
 
-![Face Centered Cubic](waves-in-crystals-img/fcc.svg)
+![Face Centered Cubic](waves-in-crystals-img/fcc.png)
 
 #### Body Centered Cubic (BCC) lattice
 
 Lastly there is the SC-lattice but with one additional lattice point at the center of the cube.
 The lattice vectors are $\vec{a_1} = (a, 0, 0)$, $\vec{a_2} = (0, a, 0)$ and $\vec{a_3} = (\frac{a}{2}, \frac{a}{2}, \frac{a}{2})$.
 
-![Body Centered Cubic](waves-in-crystals-img/bcc.svg)
+![Body Centered Cubic](waves-in-crystals-img/bcc.png)
 
 ### Miller Indices
 
 There are many different planes one can consider in a crystal. To be able to distinctly differentiate between different planes one uses the **Miller Indices** $h, k, l$.
 
-![Miller Indices Intersections](waves-in-crystals-img/miller_g.svg)
+![Miller Indices Intersections](waves-in-crystals-img/miller_g.png)
 
 The plane then intercepts the axes at $\frac{\vec{a}}{h}$, $\frac{\vec{b}}{k}$ and $\frac{\vec{c}}{l}$ and does not intercept an axis at all if the corresponding index is $0$.
 We can now relate the axes intersections to the distance between the planes.
@@ -77,7 +79,7 @@ $$\vec{c} \frac{2 \pi \vec{d}}{d^2} = 2 \pi l$$
 
 This for now seems kind of arbitrary but we will need it later.
 
-![Miller Planes Examples](waves-in-crystals-img/miller_planes.svg)
+![Miller Planes Examples](waves-in-crystals-img/miller_planes.png)
 
 ### The Reciprocal Lattice
 
@@ -105,7 +107,7 @@ The reciprocal lattice for common lattices we defined earlier can be seen in the
 
 Now let's consider a plane (e.g. electromagnetic) wave that interacts with a certain lattice. The wave will scatter at the atoms and we want to determine in which directions the outgoing waves constructively interfere with each other. Let's start by looking at only two lattice points. We have an incoming wave with wave vector $\vec{k}$ and the vector connecting the two lattice points is $\vec{d}$.
 
-![Laue Conditions](waves-in-crystals-img/laue.svg)
+![Laue Conditions](waves-in-crystals-img/laue.png)
 
 The wave's path difference between the two lattice points is $a+b$. We can calculate their length in relation to $\vec{d}$ and the angles $\alpha$ and $\beta$.
 

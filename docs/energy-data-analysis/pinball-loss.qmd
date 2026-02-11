@@ -6,6 +6,8 @@ tags: ["Machine Learning", "Quantile Regression", "Loss Functions", "Statistics"
 execute:
   echo: true
   eval: true
+format:
+  pdf
 ---
 
 ## Introduction to Pinball Loss

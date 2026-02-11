@@ -19,7 +19,7 @@ A Distribution doing a great job with their MATE Edition is Ubuntu MATE. I used 
 
 ## Ayatana Indicators
 
-![Ayatana Indicators](manjaro-mate-img/ayatana.gif)
+![Ayatana Indicators](manjaro-mate-img/ayatana.png)
 
 The most important change of the new Manjaro MATE Spin is the integration of [Ayatana Indicators](https://github.com/AyatanaIndicators). They describe the project as follows:
 
@@ -83,7 +83,7 @@ For Caja there is now by default the [caja-admin](https://github.com/infirit/caj
 
 Additionally for the text editor Pluma the official MATE package [pluma-plugins](https://github.com/mate-desktop/pluma-plugins) is now included by default. This transforms Pluma to a usable IDE with some plugins like bracket and word completion, quickhighlight, and source-code browser:
 
-![Pluma](manjaro-mate-img/pluma.gif)
+![Pluma](manjaro-mate-img/pluma.png)
 
 ## Miscellaneous
 

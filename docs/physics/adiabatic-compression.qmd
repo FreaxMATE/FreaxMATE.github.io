@@ -3,13 +3,15 @@ title: "Adiabatic Compression"
 date: 2023-02-02
 description: "How to derive the formulas of an adiabatic compression."
 tags: ["Adiabatic Process", "Ideal Gas law", "Thermodynamics", "First law of Thermodynamics", "Adiabatic", "Heat", "Inner Energy", "Work"]
+format:
+  pdf
 ---
 
 ## Introduction
 
 Let's say we have some gas trapped inside a cylinder with a piston preventing it from leaking. Now if we want to change the inner energy of the gas we can - according to the first law of Thermodynamics - either add/remove heat from the system or do work on the gas or let the gas do work on the environment.
 
-![Piston](adiabatic-compression-img/piston.svg)
+![Piston](adiabatic-compression-img/piston.png)
 
 In a formula you can write the first law of Thermodynamics like this
 
@@ -84,7 +86,7 @@ where $T$ is the temperature, $V$ the volume and $\gamma$ the adiabatic index of
 
 ## Example
 
-![Adiabatic Heating](adiabatic-compression-img/adiabatic-heating.svg)
+![Adiabatic Heating](adiabatic-compression-img/adiabatic-heating.png)
 
 As you may know, the Diesel Engine does not rely on spark ignition - the fuel can ignite without a spark needed. The fuel-air vapor is instead compressed so quickly that the temperature increases significantly - enough to start the power stroke.
 
