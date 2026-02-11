@@ -36,6 +36,7 @@ jobs:
         shell: bash
         run: |
           source .venv/bin/activate
+          export QUARTO_PYTHON=$VIRTUAL_ENV/bin/python
           quarto render
 
       - name: Deploy to GitHub Pages
