@@ -24,6 +24,8 @@ website:
         href: docs/linux/index.qmd
       - text: Physics
         href: docs/physics/index.qmd
+      - text: Energy Data Analysis
+        href: docs/energy-data-analysis/index.qmd
       - text: Quarto Features
         href: docs/quarto-features/index.qmd
     right:
@@ -45,12 +47,17 @@ website:
         - docs/physics/adiabatic-compression.qmd
         - docs/physics/waves-in-crystals.qmd
     
+    - id: energy-data-analysis
+      title: Energy Data Analysis
+      contents:
+        - docs/energy-data-analysis/index.qmd
+        - docs/energy-data-analysis/pinball-loss.qmd
+    
     - id: quarto-features
       title: Quarto Features
       contents:
         - docs/quarto-features/index.qmd
         - docs/quarto-features/showcase.qmd
-        - docs/quarto-features/pinball-loss.qmd
         - docs/quarto-features/jupyter-notebook-integration.qmd
 
 format:
