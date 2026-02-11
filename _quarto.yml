@@ -72,3 +72,5 @@ format:
     toc-depth: 3
     number-sections: true
     highlight-style: github
+    include-before-body:
+      - file: _includes/download-button.html
