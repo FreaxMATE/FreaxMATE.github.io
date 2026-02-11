@@ -1,5 +1,5 @@
 {
-  description = "mkdocs";
+  description = "FreaxMATE website with Quarto";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
@@ -15,10 +15,12 @@
         inherit system;
       };
     in pkgs.mkShell {
-      #LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
       packages = with pkgs; [
-        go
-        hugo
+        quarto
+        pandoc
+        texliveFull
+        python311
+        uv
       ];
     };
   };

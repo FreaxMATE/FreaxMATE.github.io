@@ -1,0 +1,15 @@
+---
+title: "FreaxMATE"
+---
+
+Welcome to FreaxMATE! This is a personal website featuring articles about Linux, Physics, and modern documentation techniques using Quarto.
+
+## Sections
+
+- **[Linux](docs/linux/index.html)** - Guides and tutorials for Linux systems, including distribution customization and development tools
+- **[Physics](docs/physics/index.html)** - Physics concepts and derivations from thermodynamics to solid state physics  
+- **[Quarto Features](docs/quarto-features/index.html)** - Showcase of Quarto capabilities and interactive notebooks
+
+## About
+
+This site demonstrates the power of Quarto for creating modern, interactive technical documentation with integrated Jupyter notebooks, scientific equations, and beautiful styling.

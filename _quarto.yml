@@ -1,0 +1,67 @@
+project:
+  type: website
+  output-dir: _site
+
+execute:
+  freeze: true
+
+jupyter: python3
+
+website:
+  title: "FreaxMATE"
+  site-url: "https://freaxmate.github.io"
+  repo-url: "https://github.com/FreaxMATE/FreaxMATE.github.io"
+  repo-branch: source
+  page-navigation: true
+  
+  navbar:
+    background: dark
+    search: true
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Linux
+        href: docs/linux/index.qmd
+      - text: Physics
+        href: docs/physics/index.qmd
+      - text: Quarto Features
+        href: docs/quarto-features/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/FreaxMATE/FreaxMATE.github.io
+
+  sidebar:
+    - id: linux
+      title: Linux
+      contents:
+        - docs/linux/index.qmd
+        - docs/linux/setup-git.qmd
+        - docs/linux/manjaro-mate.qmd
+    
+    - id: physics
+      title: Physics
+      contents:
+        - docs/physics/index.qmd
+        - docs/physics/adiabatic-compression.qmd
+        - docs/physics/waves-in-crystals.qmd
+    
+    - id: quarto-features
+      title: Quarto Features
+      contents:
+        - docs/quarto-features/index.qmd
+        - docs/quarto-features/showcase.qmd
+        - docs/quarto-features/pinball-loss.qmd
+        - docs/quarto-features/jupyter-notebook-integration.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    mainfont: "Helvetica Neue"
+    code-fold: false
+    code-tools: true
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    highlight-style: github

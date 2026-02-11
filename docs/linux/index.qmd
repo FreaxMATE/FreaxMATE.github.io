@@ -1,0 +1,6 @@
+---
+title: "Linux"
+description: "Learn about a variety of different linux topics"
+---
+
+Welcome to the Linux section! Here you'll find guides and tutorials about Linux systems, from setting up development environments to customizing distributions.

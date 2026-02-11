@@ -1,0 +1,277 @@
+---
+title: "Complete Guide to Quarto Features"
+date: 2024-02-11
+description: "Comprehensive showcase of Quarto's powerful features for technical documentation"
+toc: true
+---
+
+Quarto is an open-source scientific and technical publishing system that brings computational documents, presentations, dashboards, and books. This page showcases its most powerful features!
+
+## 1. Formatted Text & Styling
+
+You can use **bold text**, *italic text*, ~~strikethrough~~, and `inline code`.
+
+### Lists and Formatting
+
+Here's an unordered list:
+- Feature 1
+- Feature 2
+  - Nested item
+  - Another nested item
+- Feature 3
+
+And an ordered list:
+1. First item
+2. Second item
+   a. Sub-item one
+   b. Sub-item two
+3. Third item
+
+## 2. Callout Blocks
+
+::: {.callout-note}
+#### Note
+This is a note callout. Use these for general information that might be helpful.
+:::
+
+::: {.callout-warning}
+#### Warning
+This is a warning callout. Use for important cautions or warnings.
+:::
+
+::: {.callout-important}
+#### Important
+This callout highlights crucial information that should not be missed.
+:::
+
+::: {.callout-tip}
+#### Pro Tip
+These are helpful tips and tricks for better usage.
+:::
+
+::: {.callout-caution}
+#### Caution
+Use caution callouts for potentially dangerous operations.
+:::
+
+## 3. Mathematical Equations
+
+### Inline Mathematics
+
+The famous equation $E = mc^2$ shows the equivalence of mass and energy. The Pythagorean theorem states that $a^2 + b^2 = c^2$.
+
+### Display Mathematics
+
+The quadratic formula is:
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+The Euler formula connects trigonometry and exponentials:
+
+$$e^{i\theta} = \cos(\theta) + i\sin(\theta)$$
+
+## 4. Code Blocks with Syntax Highlighting
+
+### Python Example
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate data
+x = np.linspace(0, 2*np.pi, 100)
+y = np.sin(x)
+
+# Plot
+plt.figure(figsize=(10, 6))
+plt.plot(x, y, 'b-', linewidth=2)
+plt.title('Sine Wave')
+plt.xlabel('x')
+plt.ylabel('sin(x)')
+plt.grid(True, alpha=0.3)
+plt.show()
+```
+
+### JavaScript Example
+
+```javascript
+function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+const result = fibonacci(10);
+console.log(`Fibonacci(10) = ${result}`);
+```
+
+### Bash Example
+
+```bash
+#!/bin/bash
+
+# List all Python files
+find . -name "*.py" -type f
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run tests
+pytest tests/
+```
+
+## 5. Tables
+
+| Feature | Description | Difficulty |
+|---------|-------------|-----------|
+| Markdown | Basic formatting | Easy |
+| Math Equations | LaTeX rendering | Medium |
+| Code Execution | Live Python/R | Medium |
+| Dashboards | Interactive visualizations | Hard |
+| Websites | Multi-page sites | Medium |
+
+## 6. Tabsets
+
+::: {.panel-tabset}
+
+### Tab 1: Python
+
+```python
+# Python example
+def hello_world():
+    print("Hello, Quarto!")
+
+hello_world()
+```
+
+### Tab 2: R
+
+```r
+# R example
+hello_world <- function() {
+  print("Hello, Quarto!")
+}
+
+hello_world()
+```
+
+### Tab 3: Julia
+
+```julia
+# Julia example
+function hello_world()
+    println("Hello, Quarto!")
+end
+
+hello_world()
+```
+
+:::
+
+## 7. Executable Code Cells
+
+You can embed code that gets executed when rendering:
+
+```python
+# Simple data analysis example
+import pandas as pd
+import numpy as np
+
+# Create sample data
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'Diana'],
+    'Age': [25, 30, 35, 28],
+    'Salary': [50000, 60000, 75000, 55000]
+}
+
+df = pd.DataFrame(data)
+print("Employee Data:")
+print(df)
+print("\nStatistics:")
+print(df[['Age', 'Salary']].describe())
+```
+
+## 8. Images and Figures
+
+You can include images with captions and links:
+
+![Quarto Logo](https://quarto.org/quarto.png){fig-alt="A screenshot of the Quarto logo"}
+
+## 9. Block Quotes
+
+> "The only way to do great work is to love what you do." — Steve Jobs
+
+> This is a longer block quote that spans multiple lines.
+> 
+> It can contain multiple paragraphs and demonstrate the use of block quotes in Quarto documents.
+
+## 10. Horizontal Rules
+
+---
+
+Above is a horizontal rule, useful for visual separation.
+
+## 11. Links and References
+
+Here are some useful links:
+- [Quarto Official Website](https://quarto.org)
+- [Quarto Documentation](https://quarto.org/docs)
+- [GitHub Repository](https://github.com/quarto-dev/quarto-cli)
+
+## 12. Footnotes
+
+This text has a footnote[^1].
+
+[^1]: This is the footnote content. It can contain multiple paragraphs and formatted text.
+
+## 13. Definition Lists
+
+Term 1
+:   Definition of the first term
+
+Term 2
+:   Definition of the second term, which can span multiple lines
+:   and have multiple definitions
+
+## 14. Special Features Summary
+
+| Feature | Use Case | Example |
+|---------|----------|---------|
+| **Callouts** | Highlight important information | Warnings, tips, notes |
+| **Math** | Scientific equations | Physics, statistics, ML |
+| **Code Execution** | Live examples | Data analysis, visualizations |
+| **Tabsets** | Multiple options | Language examples, comparisons |
+| **Cross-references** | Navigation | Section links, citations |
+
+## 15. Advanced Customization
+
+::: {.callout-tip title="Customization Options" appearance="simple"}
+Quarto documents can be heavily customized:
+- Custom CSS styling
+- Theme selection (light/dark modes)
+- Layout options (sidebar, margin notes)
+- Custom templates
+- Bibliography and citation management
+:::
+
+## Getting Started with Quarto
+
+To create your own Quarto document:
+
+1. **Install Quarto**: Download from [quarto.org](https://quarto.org/docs/getting-started/installation.html)
+2. **Create a document**: `quarto create project my-project`
+3. **Write content**: Use markdown with optional code blocks
+4. **Render**: `quarto render document.qmd`
+5. **Publish**: Deploy to GitHub Pages, Netlify, or Posit Cloud
+
+## Next Steps
+
+::: {.callout-important}
+Now that you've seen what Quarto can do:
+- ✨ Explore the [**Pinball Loss** example](pinball-loss.html) with interactive Python code
+- 📚 Read more advanced features in the [official documentation](https://quarto.org/docs)
+- 🚀 Create your own technical documentation with Quarto!
+:::
+
+---
+
+**Happy documenting with Quarto! 🎉**

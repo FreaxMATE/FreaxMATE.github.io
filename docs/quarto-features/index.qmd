@@ -1,0 +1,6 @@
+---
+title: "Quarto Features"
+description: "Explore the capabilities of Quarto"
+---
+
+This section showcases the powerful features of Quarto, including interactive notebooks, scientific computing, and beautiful documentation rendering.

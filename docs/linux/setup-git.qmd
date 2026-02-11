@@ -2,10 +2,7 @@
 title: "Setting up git SSH/GPG with Github"
 date: 2022-03-14
 description: "🔒 Authenicate pushes and sign commits when interacting with Github"
-summary: "🔒 Authenicate pushes and sign commits when interacting with Github"
 tags:  ["Git", "Github", "Authenication", "SSH", "GPG", "Security", "Seahorse"]
-coverCaption: "Photo by [Ilya Pavlov](https://unsplash.com/@ilyapavlov) on [Unsplash](https://unsplash.com/)"
-showAuthor: True
 ---
 
 ## Overview
@@ -49,15 +46,15 @@ sudo pacman -S seahorse
 
 Then add a GPG key.
 
-![Create GPG key](img/gpg1.png)
+![Create GPG key](setup-git-img/gpg1.png)
 
 Enter a name, and the same email address that you use for your Github account.
 
-![Configure GPG key](img/gpg2.png)
+![Configure GPG key](setup-git-img/gpg2.png)
 
 After entering the passphrase for this key export the public key.
 
-![Export Public key](img/gpg3.png)
+![Export Public key](setup-git-img/gpg3.png)
 
 Copy the content of the exported file, sign in to your Github account and go 
 to **Settings->SSH and GPG keys->New GPG key** and paste the public key there.
@@ -97,9 +94,3 @@ git config --global url."git@github.com:".insteadOf "https://github.com/"
 **I hoped this post helped you! Happy coding!**
 
 ## Sources
-
-[Github Authentication] https://docs.github.com/en/enterprise-server@3.0/authentication
-
-[Github force SSH] https://ricostacruz.com/til/github-always-ssh
-
-

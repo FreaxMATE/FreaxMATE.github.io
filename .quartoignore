@@ -1,0 +1,14 @@
+content/
+archetypes/
+layouts/
+assets/
+config/
+static/
+go.mod
+go.sum
+flake.nix
+flake.lock
+.hugo_build.lock
+docs/linux/*-img/
+docs/physics/*-img/
+

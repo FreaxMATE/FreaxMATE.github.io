@@ -1,1 +1,24 @@
 resources/
+
+# Quarto build artifacts
+_site/
+_freeze/
+.quarto/
+*.html
+.Rhistory
+.Rproj.user/
+
+# Hugo artifacts (archived for reference)
+_archive/
+public/
+.hugo_build.lock
+
+# Python artifacts
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+**/*.quarto_ipynb
+.venv/
+uv.lock
+
+/.quarto/

@@ -1,0 +1,6 @@
+---
+title: "Physics"
+description: "Learn about a variety of different physics topics"
+---
+
+Welcome to the Physics section! Here you'll find articles exploring fundamental physics concepts, from thermodynamics to solid state physics.
