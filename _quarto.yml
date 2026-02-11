@@ -72,7 +72,7 @@ format:
     toc-depth: 3
     number-sections: true
     highlight-style: github
-    include-before-body:
+    include-after-body:
       - file: _includes/download-button.html
     include-in-header:
       - file: _includes/pdf-script.html

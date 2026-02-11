@@ -1,15 +1,27 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const downloadBtn = document.querySelector('.download-pdf-button');
   const pdfLink = document.getElementById('pdf-download-link');
   
-  if (pdfLink) {
+  if (downloadBtn && pdfLink) {
+    // Check if this is an index/section landing page
+    const isIndexPage = window.location.pathname.endsWith('/') || 
+                        window.location.pathname.endsWith('index.html') ||
+                        window.location.pathname === '/';
+    
+    // Hide button on section landing pages
+    if (isIndexPage) {
+      downloadBtn.style.display = 'none';
+      return;
+    }
+    
     // Construct the PDF path based on current URL
     let pdfPath = window.location.pathname
       .replace(/\.html$/, '') // Remove .html
       .replace(/\/$/, ''); // Remove trailing slash
     
-    // Handle root/index pages
-    if (!pdfPath || pdfPath === '/') {
+    // Handle root page
+    if (!pdfPath || pdfPath === '') {
       pdfPath = '/index';
     }
     
@@ -17,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     pdfPath = pdfPath + '.pdf';
     pdfLink.href = pdfPath;
     pdfLink.download = pdfPath.split('/').pop() || 'index.pdf';
+    pdfLink.target = '_blank'; // Open in new tab but still download
   }
 });
 </script>

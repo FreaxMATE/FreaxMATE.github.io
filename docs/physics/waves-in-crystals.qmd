@@ -4,7 +4,8 @@ date: 2023-04-14
 description: "How do waves scatter in crystal structures. This article covers the basics of lattices, Miller indices, reciprocal lattice as well as the Laue conditions and the structure factor."
 tags: ["Structure", "Lattice", "Basis", "Wigner-Seitz Unit Cell", "Simple Cubic", "SC", "Face Centered Cubic", "FCC", "Body Centered Cubic", "BCC", "Miller Indices", "Reciprocal Lattice", "X-ray Scattering", "Interference", "Laue Conditions", "Waves in Crystal", "Structure Factor"]
 format:
-  pdf
+  html: default
+  pdf: default
 ---
 
 ## Introduction

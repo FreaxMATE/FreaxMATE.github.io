@@ -4,7 +4,8 @@ date: 2023-02-02
 description: "How to derive the formulas of an adiabatic compression."
 tags: ["Adiabatic Process", "Ideal Gas law", "Thermodynamics", "First law of Thermodynamics", "Adiabatic", "Heat", "Inner Energy", "Work"]
 format:
-  pdf
+  html: default
+  pdf: default
 ---
 
 ## Introduction
