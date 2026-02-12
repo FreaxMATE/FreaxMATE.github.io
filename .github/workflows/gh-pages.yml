@@ -32,6 +32,10 @@ jobs:
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Install TinyTeX
+        shell: bash
+        run: quarto install tinytex
+
       - name: Render Quarto project
         shell: bash
         run: |
