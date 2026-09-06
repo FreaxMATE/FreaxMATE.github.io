@@ -1,9 +1,8 @@
-# freaxmate.github.io
+# website
 
 Konstantin Unruh's personal site: notes on physics, Linux and more.
 Built with [Quarto](https://quarto.org/) and published to GitHub Pages.
 
-Live site: <https://freaxmate.github.io>
 
 ## Layout
 
@@ -61,6 +60,10 @@ fails that way, use the official tarball from the Quarto releases page instead.
 Pushing to `source` runs `.github/workflows/gh-pages.yml`, which installs
 Quarto with TinyTeX, renders the site, and publishes `_site/` to the
 `gh-pages` branch.
+
+The custom domain is not stored in this repository. It lives in the
+`SITE_DOMAIN` Actions variable (repo Settings, Secrets and variables, Actions).
+CI patches `site-url` and writes the `CNAME` file from it at build time.
 
 ## Analytics
 

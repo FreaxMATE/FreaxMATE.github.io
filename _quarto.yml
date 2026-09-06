@@ -13,8 +13,8 @@ jupyter: python3
 website:
   title: "Konstantin Unruh"
   description: "Konstantin Unruh's notes on physics, Linux and more."
-  site-url: "https://freaxmate.github.io"
-  repo-url: "https://github.com/FreaxMATE/FreaxMATE.github.io"
+  site-url: "https://freaxmate.github.io/website"  # overridden in CI from the SITE_DOMAIN variable
+  repo-url: "https://github.com/FreaxMATE/website"
   repo-branch: source
   favicon: assets/favicon.svg
   open-graph: true
@@ -43,7 +43,7 @@ website:
     center: ""
     right:
       - text: Source
-        href: https://github.com/FreaxMATE/FreaxMATE.github.io
+        href: https://github.com/FreaxMATE/website
       - text: RSS
         href: index.xml
       - text: Built with Quarto

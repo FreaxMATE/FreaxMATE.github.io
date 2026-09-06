@@ -36,6 +36,13 @@ jobs:
           version: 1.10.18
           tinytex: true
 
+      - name: Set site URL from the SITE_DOMAIN repository variable
+        if: ${{ vars.SITE_DOMAIN != '' }}
+        shell: bash
+        run: |
+          sed -i "s|^  site-url: .*|  site-url: \"https://${{ vars.SITE_DOMAIN }}\"|" _quarto.yml
+          grep -n "site-url" _quarto.yml
+
       - name: Render Quarto project
         shell: bash
         run: |
@@ -50,5 +57,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./_site
+          # Custom domain comes from the SITE_DOMAIN repository variable (Settings > Secrets and variables > Actions)
+          cname: ${{ vars.SITE_DOMAIN }}
           # Keep gh-pages as a single commit; build output needs no history
           force_orphan: true
