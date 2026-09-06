@@ -1,8 +1,9 @@
 ---
 title: "Setting up git SSH/GPG with Github"
 date: 2022-03-14
-description: "🔒 Authenicate pushes and sign commits when interacting with Github"
-tags:  ["Git", "Github", "Authenication", "SSH", "GPG", "Security", "Seahorse"]
+description: "Authenticate pushes and sign commits when interacting with GitHub."
+tags: ["Git", "Github", "Authentication", "SSH", "GPG", "Security", "Seahorse"]
+categories: ["Linux"]
 ---
 
 ## Overview

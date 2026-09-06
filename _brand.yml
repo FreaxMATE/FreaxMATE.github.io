@@ -1,0 +1,72 @@
+meta:
+  name: FreaxMATE
+  link:
+    home: https://freaxmate.github.io
+    github: https://github.com/FreaxMATE
+
+# "Clay" palette. Every colour has a light and a dark value so one brand file
+# drives both themes. Neutrals are tinted slightly warm to sit with the accent.
+color:
+  palette:
+    clay-500: "#b8532f"
+    clay-300: "#f1b179"
+    clay-soft-light: "#f8e9e0"
+    clay-soft-dark: "#3a261a"
+    paper: "#fbf9f6"
+    ink: "#1c1512"
+    night: "#12100e"
+    chalk: "#f1ebe6"
+    muted-light: "#6b5d55"
+    muted-dark: "#a99c93"
+    line-light: "#e6ddd5"
+    line-dark: "#2c2621"
+  foreground:
+    light: ink
+    dark: chalk
+  background:
+    light: paper
+    dark: night
+  primary:
+    light: clay-500
+    dark: clay-300
+  secondary:
+    light: muted-light
+    dark: muted-dark
+  tertiary:
+    light: line-light
+    dark: line-dark
+  success: "#4f7f22"
+  info: "#0e6e8e"
+  warning: "#c48a12"
+  danger: "#b02a2a"
+
+typography:
+  fonts:
+    - family: Fira Sans
+      source: google
+      weight: [400, 500, 600]
+      style: [normal, italic]
+    - family: Fira Code
+      source: google
+      weight: [400, 500, 600]
+  base:
+    family: Fira Sans
+    size: 17px
+    line-height: 1.6
+  headings:
+    family: Fira Code
+    weight: 600
+    line-height: 1.15
+  monospace:
+    family: Fira Code
+    size: 0.9em
+  monospace-inline:
+    family: Fira Code
+  monospace-block:
+    family: Fira Code
+    line-height: 1.5
+  link:
+    color:
+      light: clay-500
+      dark: clay-300
+    decoration: underline

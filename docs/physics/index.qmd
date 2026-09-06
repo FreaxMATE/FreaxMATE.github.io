@@ -1,6 +1,15 @@
 ---
 title: "Physics"
-description: "Learn about a variety of different physics topics"
+description: "Derivations worth keeping, from thermodynamics to solid state physics."
+toc: false
+number-sections: false
+listing:
+  contents:
+    - "*.qmd"
+    - "!index.qmd"
+  sort: "date desc"
+  type: default
+  date-format: "YYYY-MM-DD"
+  fields: [image, date, title, description, categories, reading-time]
+  image-height: 150px
 ---
-
-Welcome to the Physics section! Here you'll find articles exploring fundamental physics concepts, from thermodynamics to solid state physics.

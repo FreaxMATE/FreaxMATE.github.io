@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - assets/
+    - "!_archive/"
 
 execute:
   freeze: true
@@ -8,71 +11,58 @@ execute:
 jupyter: python3
 
 website:
-  title: "FreaxMATE"
+  title: "Konstantin Unruh"
+  description: "Konstantin Unruh's notes on physics, Linux and more."
   site-url: "https://freaxmate.github.io"
   repo-url: "https://github.com/FreaxMATE/FreaxMATE.github.io"
   repo-branch: source
+  favicon: assets/favicon.svg
+  open-graph: true
   page-navigation: true
-  
+  back-to-top-navigation: true
+
   navbar:
-    background: dark
+    pinned: false
     search: true
     left:
-      - text: Home
-        href: index.qmd
-      - text: Linux
-        href: docs/linux/index.qmd
       - text: Physics
         href: docs/physics/index.qmd
-      - text: Energy Data Analysis
-        href: docs/energy-data-analysis/index.qmd
-      - text: Quarto Features
-        href: docs/quarto-features/index.qmd
+      - text: Linux
+        href: docs/linux/index.qmd
     right:
       - icon: github
-        href: https://github.com/FreaxMATE/FreaxMATE.github.io
+        href: https://github.com/FreaxMATE
+        aria-label: GitHub
+    tools:
+      - icon: rss
+        href: index.xml
+        aria-label: RSS feed
 
-  sidebar:
-    - id: linux
-      title: Linux
-      contents:
-        - docs/linux/index.qmd
-        - docs/linux/setup-git.qmd
-        - docs/linux/manjaro-mate.qmd
-    
-    - id: physics
-      title: Physics
-      contents:
-        - docs/physics/index.qmd
-        - docs/physics/adiabatic-compression.qmd
-        - docs/physics/waves-in-crystals.qmd
-    
-    - id: energy-data-analysis
-      title: Energy Data Analysis
-      contents:
-        - docs/energy-data-analysis/index.qmd
-        - docs/energy-data-analysis/pinball-loss.qmd
-    
-    - id: quarto-features
-      title: Quarto Features
-      contents:
-        - docs/quarto-features/index.qmd
-        - docs/quarto-features/showcase.qmd
-        - docs/quarto-features/jupyter-notebook-integration.qmd
+  page-footer:
+    left: "© 2022–2026 Konstantin Unruh"
+    center: ""
+    right:
+      - text: Source
+        href: https://github.com/FreaxMATE/FreaxMATE.github.io
+      - text: RSS
+        href: index.xml
+      - text: Built with Quarto
+        href: https://quarto.org
 
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
-    mainfont: "Helvetica Neue"
+      light: [default, brand, styles/site.scss]
+      dark: [default, brand, styles/site.scss]
+    respect-user-color-scheme: true
     code-fold: false
-    code-tools: true
+    code-tools: false
+    code-copy: true
     toc: true
     toc-depth: 3
-    number-sections: true
+    number-sections: false
     highlight-style: github
-    include-after-body:
-      - file: _includes/download-button.html
+    smooth-scroll: true
+    link-external-newwindow: true
     include-in-header:
-      - file: _includes/pdf-script.html
+      - file: _includes/analytics.html

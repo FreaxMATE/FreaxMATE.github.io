@@ -1,0 +1,294 @@
+/*-- scss:defaults --*/
+
+// Brand supplies colours and fonts. These only tune Bootstrap/Quarto knobs
+// that brand does not reach.
+$border-radius: 10px;
+$border-radius-sm: 6px;
+$border-radius-lg: 14px;
+$headings-letter-spacing: -0.02em;
+$h1-font-size: 2.1rem;
+$h2-font-size: 1.55rem;
+$h3-font-size: 1.2rem;
+$code-block-border-left: false;
+$toc-font-size: 0.85rem;
+$sidebar-font-size: 0.9rem;
+$sidebar-font-size-section: 0.9rem;
+
+/*-- scss:rules --*/
+
+// ---------------------------------------------------------------------------
+// Derived tokens, valid in whichever theme (light or dark) this file compiles in
+// ---------------------------------------------------------------------------
+$fm-line: mix($body-color, $body-bg, 13%);
+$fm-muted: mix($body-color, $body-bg, 62%);
+$fm-surface: mix($body-bg, $body-color, 97.5%);
+$fm-code-bg: mix($body-bg, $body-color, 95.5%);
+$fm-accent-soft: mix($primary, $body-bg, 14%);
+
+:root {
+  --fm-dot: #{red($primary)}, #{green($primary)}, #{blue($primary)};
+  --fm-line: #{$fm-line};
+  --fm-muted: #{$fm-muted};
+  --fm-surface: #{$fm-surface};
+  --fm-accent: #{$primary};
+  --fm-accent-soft: #{$fm-accent-soft};
+}
+
+body { -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4 { text-wrap: balance; }
+h2 { margin-top: 2.2rem; }
+
+a { text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+// ---------------------------------------------------------------------------
+// Navbar
+// ---------------------------------------------------------------------------
+.navbar {
+  background-color: $body-bg !important;
+  border-bottom: 1px solid $fm-line;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+
+  .navbar-brand {
+    font-family: $font-family-monospace;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: $body-color;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    &::before {
+      content: "";
+      width: 10px; height: 10px; border-radius: 50%;
+      background: $primary;
+      box-shadow: 0 0 0 4px $fm-accent-soft;
+    }
+  }
+  .navbar-nav .nav-link {
+    color: $fm-muted;
+    font-size: 0.95rem;
+    &:hover, &.active { color: $body-color; }
+  }
+  .quarto-navbar-tools .quarto-navigation-tool,
+  .navbar-nav .nav-link > i { color: $fm-muted; }
+  // Light/dark toggle: Quarto draws it very faint by default
+  .quarto-color-scheme-toggle {
+    opacity: 1;
+    .bi::before { background-color: $fm-muted; }
+    &:hover .bi::before { background-color: $body-color; }
+  }
+  .aa-Autocomplete .aa-DetachedSearchButton {
+    background: $fm-surface;
+    border-color: $fm-line;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Article title block
+// ---------------------------------------------------------------------------
+#title-block-header {
+  margin-bottom: 2rem;
+  .title { font-size: 2.3rem; line-height: 1.12; letter-spacing: -0.03em; }
+  .description { color: $fm-muted; font-size: 1.1rem; margin-top: 0.6rem; }
+  .quarto-title-meta { margin-top: 1.2rem; }
+  .quarto-title-meta-heading {
+    font-family: $font-family-monospace;
+    font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: $fm-muted;
+  }
+  .quarto-title-meta-contents { font-size: 0.9rem; }
+  .quarto-categories .quarto-category {
+    border-color: $fm-line; color: $fm-muted; text-transform: none;
+    font-family: $font-family-monospace; font-size: 0.72rem; letter-spacing: 0.04em;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Code, callouts, tables, figures
+// ---------------------------------------------------------------------------
+div.sourceCode, pre.sourceCode, pre:not(.sourceCode) {
+  background-color: $fm-code-bg;
+  border: 1px solid $fm-line;
+  border-radius: $border-radius;
+}
+pre.sourceCode { padding: 0.9rem 1rem; }
+code { font-size: 0.88em; }
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+  background: $fm-code-bg;
+  border: 1px solid $fm-line;
+  border-radius: 5px;
+  padding: 0.08em 0.35em;
+  color: $body-color;
+}
+.code-copy-button:hover { background-color: $fm-accent-soft; }
+
+.callout {
+  border-radius: $border-radius;
+  border-left-width: 4px;
+  .callout-header { font-weight: 600; }
+}
+
+.figure img, .quarto-figure img, img.img-fluid {
+  border-radius: $border-radius;
+}
+figcaption { color: $fm-muted; font-size: 0.85rem; }
+
+table.table { font-variant-numeric: tabular-nums; }
+
+// ---------------------------------------------------------------------------
+// Sidebar, TOC, footer
+// ---------------------------------------------------------------------------
+.sidebar.sidebar-navigation:not(.rollup) { border-color: $fm-line; }
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
+  border-left-color: $primary;
+}
+.sidebar-title { font-family: $font-family-monospace; font-size: 0.85rem; letter-spacing: -0.02em; }
+
+.nav-footer {
+  border-top: 1px solid $fm-line;
+  color: $fm-muted;
+  font-size: 0.85rem;
+  a { color: $fm-muted; }
+}
+
+// Quarto's page-navigation (previous / next) links
+.page-navigation .nav-page a { color: $fm-muted; }
+.page-navigation .nav-page a:hover { color: $body-color; }
+
+// ---------------------------------------------------------------------------
+// Section listing pages (default listing type)
+// ---------------------------------------------------------------------------
+.quarto-listing-default .quarto-post {
+  border-bottom: 1px solid $fm-line;
+  padding: 1.4rem 0;
+  .listing-title { font-family: $headings-font-family; font-size: 1.15rem; letter-spacing: -0.02em; }
+  .listing-description { color: $fm-muted; font-size: 0.95rem; }
+  .listing-date, .listing-reading-time { font-family: $font-family-monospace; font-size: 0.78rem; color: $fm-muted; font-variant-numeric: tabular-nums; }
+  .thumbnail img { border-radius: $border-radius; }
+  .listing-categories .listing-category {
+    border-color: $fm-line; color: $fm-muted; text-transform: none;
+    font-family: $font-family-monospace; font-size: 0.7rem;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Homepage (index.qmd, page-layout: custom)
+// ---------------------------------------------------------------------------
+.fm-home {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+
+  .fm-eyebrow, .fm-kicker {
+    font-family: $font-family-monospace;
+    font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: $fm-muted;
+  }
+}
+
+.fm-hero {
+  position: relative; overflow: hidden; isolation: isolate;
+  margin: 1.25rem -1.5rem 0;
+  padding: 5rem 1.5rem 4.5rem;
+  border-radius: 18px;
+
+  .fm-hero-glow {
+    position: absolute; inset: 0; z-index: -2;
+    background:
+      radial-gradient(55% 60% at 30% 0%, rgba(var(--fm-dot), 0.18), transparent 70%),
+      radial-gradient(35% 45% at 95% 25%, rgba(var(--fm-dot), 0.12), transparent 70%);
+  }
+  .fm-starfield {
+    position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    -webkit-mask-image: radial-gradient(ellipse at 55% 45%, #000 55%, transparent 100%);
+            mask-image: radial-gradient(ellipse at 55% 45%, #000 55%, transparent 100%);
+    canvas { width: 100%; height: 100%; display: block; }
+  }
+  .fm-hero-inner { max-width: 44rem; }
+  h1 {
+    margin: 1rem 0 0;
+    font-family: $font-family-monospace;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 4.2vw, 3.1rem);
+    letter-spacing: -0.045em;
+    line-height: 1.12;
+    em { font-style: normal; color: $primary; }
+  }
+  .fm-lede { margin: 1.25rem 0 0; font-size: 1.12rem; color: $fm-muted; max-width: 38rem; }
+  .fm-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+  .fm-facts {
+    display: grid; grid-template-columns: repeat(3, auto); gap: 0.5rem 2.2rem;
+    margin: 2.6rem 0 0; font-size: 0.85rem; width: max-content; max-width: 100%;
+    dt { font-family: $font-family-monospace; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: $fm-muted; font-weight: 400; }
+    dd { margin: 0.15rem 0 0; font-weight: 500; }
+  }
+}
+
+.fm-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.7rem 1.1rem; border-radius: 10px;
+  font-weight: 500; font-size: 0.92rem; text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease;
+  svg { width: 1em; height: 1em; }
+  &:hover { transform: translateY(-1px); text-decoration: none; }
+}
+.fm-btn-primary {
+  background: $primary; color: $body-bg;
+  &:hover { color: $body-bg; background: mix($primary, $body-color, 88%); }
+}
+.fm-btn-ghost {
+  border-color: $fm-line; color: $body-color; background: rgba($fm-surface, 0.7);
+  &:hover { color: $body-color; background: $fm-surface; }
+}
+
+.fm-section { padding-top: 4rem; }
+.fm-section-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  margin-bottom: 1.5rem;
+  h2 { margin: 0; padding: 0; border: 0; font-family: $font-family-monospace; font-size: 1.3rem; letter-spacing: -0.03em; }
+  a { font-size: 0.88rem; }
+}
+
+.fm-topics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.fm-topic {
+  display: flex; flex-direction: column; gap: 0.5rem;
+  padding: 1.35rem 1.35rem 1.2rem;
+  background: $fm-surface;
+  border: 1px solid $fm-line;
+  border-radius: 14px;
+  color: $body-color; text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+  &:hover { border-color: $primary; transform: translateY(-2px); text-decoration: none; color: $body-color; }
+  .fm-glyph { width: 30px; height: 30px; color: $primary; svg { width: 100%; height: 100%; } }
+  h3 { margin: 0; font-size: 1.05rem; letter-spacing: -0.02em; }
+  p { margin: 0; color: $fm-muted; font-size: 0.92rem; flex: 1; }
+}
+
+.fm-articles {
+  list-style: none; margin: 0; padding: 0; border-top: 1px solid $fm-line;
+  li { border-bottom: 1px solid $fm-line; }
+  a {
+    display: grid; grid-template-columns: 6.5rem 1fr auto; gap: 1.25rem; align-items: baseline;
+    padding: 0.95rem 0.5rem; margin: 0 -0.5rem;
+    color: $body-color; text-decoration: none; border-radius: 8px;
+    transition: background 0.15s ease;
+    &:hover { background: $fm-accent-soft; text-decoration: none; color: $body-color; }
+  }
+  .fm-date { font-family: $font-family-monospace; font-size: 0.8rem; color: $fm-muted; font-variant-numeric: tabular-nums; }
+  .fm-title { font-weight: 500; small { display: block; font-weight: 400; color: $fm-muted; font-size: 0.88rem; margin-top: 0.15rem; } }
+  .fm-tag { font-family: $font-family-monospace; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: $primary; white-space: nowrap; }
+}
+
+@media (max-width: 760px) {
+  .fm-topics { grid-template-columns: 1fr; }
+  .fm-articles a { grid-template-columns: 1fr; gap: 0.25rem; }
+  .fm-articles .fm-tag { order: -1; }
+  .fm-hero .fm-facts { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fm-btn, .fm-topic { transition: none; }
+}

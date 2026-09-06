@@ -1,5 +1,3 @@
-resources/
-
 # Quarto build artifacts
 _site/
 _freeze/
@@ -9,10 +7,15 @@ _freeze/
 .Rhistory
 .Rproj.user/
 
-# Hugo artifacts (archived for reference)
+# Local-only archive of the old Hugo site (not part of the repository)
 _archive/
-public/
-.hugo_build.lock
+
+# LaTeX side products from PDF rendering
+*.aux
+*.log
+*.tex
+*.fls
+*.fdb_latexmk
 
 # Python artifacts
 __pycache__/

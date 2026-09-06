@@ -3,6 +3,8 @@ title: "Making Manjaro The Flagship MATE Distro"
 date: 2022-03-03
 description: "Manjaro MATE edition with Ayatana Indicators and additional enhancements 🎉 🎊"
 tags: ["Linux", "Manjaro", "MATE", "Desktop Environment", "ISO", "Customize", "Distribution", "Ayatana Indicators"]
+categories: ["Linux"]
+image: manjaro-mate-img/feature.jpg
 ---
 
 Hi there 👋,
@@ -51,7 +53,7 @@ To be in full control of your audio streams the minimal patchbay [Helvum](https:
 
 ## Classy curated apps
 
-![Apps](manjaro-mate-img/apps.png)
+![Apps](manjaro-mate-img/apps.jpg)
 
 The main applications included in the ISO are not surprising but some nice apps were included.
 
@@ -69,13 +71,13 @@ The default shell is [Fish](https://fishshell.com/), to make the command line mo
 
 [MATE Layouts](https://github.com/FreaxMATE/mate-layouts) (based on [MATE Tweak](https://github.com/ubuntu-mate/mate-tweak)) lets you quickly switch between different panel layouts to get a user experience similar to Windows, Mac, the old Unity or simply the productive Gnome 2 Layout which is the default one.
 
-![Gnome 2 Layout](manjaro-mate-img/gnome.png)
+![Gnome 2 Layout](manjaro-mate-img/gnome.jpg)
 
-![Cupertino Layout](manjaro-mate-img/cupertino.png)
+![Cupertino Layout](manjaro-mate-img/cupertino.jpg)
 
-![Redmond Layout](manjaro-mate-img/redmond.png)
+![Redmond Layout](manjaro-mate-img/redmond.jpg)
 
-![Mutiny Layout](manjaro-mate-img/mutiny.png)
+![Mutiny Layout](manjaro-mate-img/mutiny.jpg)
 
 ## App Plugins
 
@@ -93,9 +95,9 @@ The default theme is now the slick looking [Matcha-dark-pueril](https://github.c
 
 For Pluma and the [MATE Terminal](https://github.com/mate-desktop/mate-terminal) there is a new elegant and consistent theme:
 
-![Theme Pluma](manjaro-mate-img/theme-pluma.png)
+![Theme Pluma](manjaro-mate-img/theme-pluma.jpg)
 
-![Theme Terminal](manjaro-mate-img/theme-terminal.png)
+![Theme Terminal](manjaro-mate-img/theme-terminal.jpg)
 
 As you saw in these pictures the default font across the whole desktop is [Fira Code](https://github.com/tonsky/FiraCode).
 
@@ -124,26 +126,3 @@ The ISO consists of two files because GitHub cannot handle files larger than 2 G
 ## Future Ideas
 
 - Set [Picom](https://wiki.archlinux.org/title/Picom) as default compositor
-
-
-## App Plugins
-
-For Caja there is now by default the [caja-admin](https://github.com/infirit/caja-admin) plugin installed. So you can open directories or edit root files as administrator.
-
-Additionally for the text editor Pluma the official MATE package [pluma-plugin](https://github.com/mate-desktop/pluma-plugins) is now included by default. This transforms Pluma to a usable IDE with some plugins like bracket and word completion, quickhighlight, source-code browser:
-
-![Pluma](img/pluma.png)
-
-## Miscellaneous
-
-### Themes
-
-The default theme is now the slick looking [Matcha-dark-pueril](https://github.com/vinceliuice/Matcha-gtk-theme) theme in a MATE green style, which I [helped creating](https://github.com/vinceliuice/Matcha-gtk-theme/pull/174). Especially for this theme I created a custom green styled [Papirus Folders](https://github.com/FreaxMATE/papirus-mate-icon-theme) for the used [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme).
-
-For Pluma and the [MATE Terminal](https://github.com/mate-desktop/mate-terminal) there is a new elegant and consistent theme:
-
-![Theme Pluma](manjaro-mate-img/theme-pluma.png)
-
-![Theme Terminal](manjaro-mate-img/theme-terminal.png)
-
-As you saw in this pictures the default font across the whole desktop is [Fira Code](https://github.com/tonsky/FiraCode).

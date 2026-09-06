@@ -3,6 +3,8 @@ title: "Waves in Crystals"
 date: 2023-04-14
 description: "How do waves scatter in crystal structures. This article covers the basics of lattices, Miller indices, reciprocal lattice as well as the Laue conditions and the structure factor."
 tags: ["Structure", "Lattice", "Basis", "Wigner-Seitz Unit Cell", "Simple Cubic", "SC", "Face Centered Cubic", "FCC", "Body Centered Cubic", "BCC", "Miller Indices", "Reciprocal Lattice", "X-ray Scattering", "Interference", "Laue Conditions", "Waves in Crystal", "Structure Factor"]
+categories: ["Physics"]
+image: waves-in-crystals-img/feature.jpg
 format:
   html: default
   pdf: default
@@ -80,7 +82,7 @@ $$\vec{c} \frac{2 \pi \vec{d}}{d^2} = 2 \pi l$$
 
 This for now seems kind of arbitrary but we will need it later.
 
-![Miller Planes Examples](waves-in-crystals-img/miller_planes.png)
+![Miller Planes Examples](waves-in-crystals-img/miller_planes.jpg)
 
 ### The Reciprocal Lattice
 

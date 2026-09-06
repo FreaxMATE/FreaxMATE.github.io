@@ -1,114 +1,74 @@
-# FreaxMATE.github.io
+# freaxmate.github.io
 
-A modern technical documentation and blog site built with [Quarto](https://quarto.org/).
+Konstantin Unruh's personal site: notes on physics, Linux and more.
+Built with [Quarto](https://quarto.org/) and published to GitHub Pages.
 
-## Features
+Live site: <https://freaxmate.github.io>
 
-- 📝 **Technical Documentation**: Write articles on Linux, Physics, and technical topics
-- 🧮 **Scientific Computing**: Embedded Jupyter notebooks and executable Python code
-- 📊 **Interactive Visualizations**: Create dynamic dashboards and plots
-- 🎨 **Beautiful Styling**: Professional HTML output with customizable themes
-- 🚀 **Easy Deployment**: Automated GitHub Pages deployment with Actions
-
-## Getting Started
-
-### Prerequisites
-
-- [Quarto](https://quarto.org/docs/getting-started/installation.html)
-- Python 3.9+ (for executing code cells)
-- Git
-
-### Local Development
-
-1. Clone the repository:
-```bash
-git clone https://github.com/FreaxMATE/FreaxMATE.github.io.git
-cd FreaxMATE.github.io
-```
-
-2. Install dependencies (optional, for Nix users):
-```bash
-nix flake update
-nix develop  # Activates the development environment
-```
-
-3. Preview the site locally:
-```bash
-quarto preview
-```
-
-This will render the site and open it in your browser. Changes are automatically reloaded.
-
-4. Render the full site:
-```bash
-quarto render
-```
-
-The output will be in the `_site/` directory.
-
-## Project Structure
+## Layout
 
 ```
 .
-├── _quarto.yml           # Quarto project configuration
-├── index.qmd            # Home page
+├── _quarto.yml          # Site config: nav, footer, formats, theme layering
+├── _brand.yml           # Colours (light + dark) and fonts, applied everywhere
+├── styles/site.scss     # Custom styling on top of Bootstrap + brand
+├── index.qmd            # Homepage (custom layout, hero, latest articles)
+├── _templates/          # EJS template for the homepage article list
+├── assets/              # Starfield script, favicon
+├── _includes/           # analytics.html (Umami snippet)
 ├── docs/
-│   ├── linux/           # Linux articles
-│   ├── physics/         # Physics articles
-│   └── quarto-features/ # Quarto feature demonstrations
-├── .github/workflows/   # GitHub Actions workflows
-└── _site/              # Build output (generated)
+│   ├── physics/         # index.qmd is an auto-generated listing
+│   └── linux/
+└── .github/workflows/   # Render + deploy on push to `source`
 ```
 
-## Writing Content
+## Writing an article
 
-### Creating a New Article
+Create `docs/<section>/<slug>.qmd` and put images in `docs/<section>/<slug>-img/`:
 
-Create a `.qmd` file in the appropriate directory:
-
-```
+```yaml
 ---
-title: "Article Title"
-date: 2024-02-11
-description: "Brief description"
-tags: ["tag1", "tag2"]
+title: "Article title"
+date: 2026-09-06
+description: "One sentence shown in listings and link previews."
+categories: ["Physics"]          # section tag shown on the homepage
+image: my-article-img/feature.jpg  # optional, shown on the section page
+format:
+  html: default
+  pdf: default                    # adds an "Other Formats: PDF" link
 ---
-
-Your content here with **markdown**, code blocks, and equations.
 ```
 
-### Including Code Execution
+Section pages and the homepage pick the article up automatically.
+Python code cells run at render time and are cached under `_freeze/`.
 
-Code blocks can be executed during rendering:
+## Local preview
 
-```{python}
-import numpy as np
-print("Hello from Quarto!")
+```bash
+nix develop          # or install quarto + uv yourself
+uv sync
+quarto preview
 ```
 
-### Mathematical Equations
+`quarto render --to html` skips the PDF builds if you have no LaTeX installed.
 
-Use LaTeX for inline ($x^2 + y^2 = z^2$) or display math:
-
-$$\int_0^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$
+Note: the `quarto` package in nixpkgs currently ships a pandoc that is too old
+for Quarto 1.10 ("Unknown option syntax-highlighting"). If `nix develop`
+fails that way, use the official tarball from the Quarto releases page instead.
 
 ## Deployment
 
-This site is automatically deployed to GitHub Pages when you push to the `source` branch:
+Pushing to `source` runs `.github/workflows/gh-pages.yml`, which installs
+Quarto with TinyTeX, renders the site, and publishes `_site/` to the
+`gh-pages` branch.
 
-1. Changes are pushed to the `source` branch
-2. GitHub Actions runs the workflow in `.github/workflows/gh-pages.yml`
-3. Quarto renders the content to `_site/`
-4. The output is deployed to the `gh-pages` branch (served at the domain)
+## Analytics
 
-View the live site at: [https://freaxmate.github.io](https://freaxmate.github.io)
-
-## Learn More
-
-- [Quarto Official Documentation](https://quarto.org/docs)
-- [Quarto Guides](https://quarto.org/docs/guide/)
-- [Quarto Community](https://quarto.org/docs/community/)
+The site is prepared for [Umami Cloud](https://cloud.umami.is) (open source,
+cookie-free). Create a website there, copy its ID into
+`_includes/analytics.html`, and uncomment the script tag. Until then nothing
+is loaded.
 
 ## License
 
-See LICENSE file for details.
+See [LICENSE](LICENSE).
