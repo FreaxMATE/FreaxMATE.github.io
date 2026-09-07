@@ -41,7 +41,9 @@ jobs:
         shell: bash
         run: |
           sed -i "s|^  site-url: .*|  site-url: \"https://${{ vars.SITE_DOMAIN }}\"|" _quarto.yml
+          sed -i "s|data-domains=\"[^\"]*\"|data-domains=\"${{ vars.SITE_DOMAIN }}\"|" _includes/analytics.html
           grep -n "site-url" _quarto.yml
+          grep -o 'data-domains="[^"]*"' _includes/analytics.html
 
       - name: Render Quarto project
         shell: bash
