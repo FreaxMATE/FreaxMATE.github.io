@@ -67,10 +67,9 @@ CI patches `site-url` and writes the `CNAME` file from it at build time.
 
 ## Analytics
 
-The site is prepared for [Umami Cloud](https://cloud.umami.is) (open source,
-cookie-free). Create a website there, copy its ID into
-`_includes/analytics.html`, and uncomment the script tag. Until then nothing
-is loaded.
+Page views are counted with [Umami Cloud](https://cloud.umami.is) (open
+source, cookie-free, no consent banner needed). The snippet lives in
+`_includes/analytics.html` and only tracks the production domain.
 
 ## License
 
