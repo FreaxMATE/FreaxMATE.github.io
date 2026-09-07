@@ -41,14 +41,13 @@ color:
   danger: "#b02a2a"
 
 typography:
+  # Self-hosted: the @font-face rules live in styles/site.scss and the woff2
+  # files in assets/fonts. "system" tells Quarto not to link any font service.
   fonts:
     - family: Fira Sans
-      source: google
-      weight: [400, 500, 600]
-      style: [normal, italic]
+      source: system
     - family: Fira Code
-      source: google
-      weight: [400, 500, 600]
+      source: system
   base:
     family: Fira Sans
     size: 17px

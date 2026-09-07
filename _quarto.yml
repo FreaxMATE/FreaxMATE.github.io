@@ -3,7 +3,7 @@ project:
   output-dir: _site
   resources:
     - assets/
-    - "!_archive/"
+  post-render: scripts/strip-remote.py
 
 execute:
   freeze: true
@@ -62,6 +62,9 @@ format:
     toc-depth: 3
     number-sections: false
     highlight-style: github
+    html-math-method:
+      method: mathjax
+      url: /assets/mathjax/tex-chtml.js
     smooth-scroll: true
     link-external-newwindow: true
     include-in-header:

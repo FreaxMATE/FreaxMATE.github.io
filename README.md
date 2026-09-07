@@ -41,6 +41,18 @@ format:
 Section pages and the homepage pick the article up automatically.
 Python code cells run at render time and are cached under `_freeze/`.
 
+## No third-party requests
+
+Visitors' browsers talk only to this site (and Umami, see below):
+
+- Fonts: Fira Sans and Fira Code are self-hosted from `assets/fonts/`
+  (fontsource builds), declared as `@font-face` in `styles/site.scss`.
+  `_brand.yml` marks them `source: system` so Quarto links no font service.
+- Math: MathJax 3 and its fonts are vendored under `assets/mathjax/`;
+  `html-math-method.url` in `_quarto.yml` points there.
+- `scripts/strip-remote.py` runs after each render and removes the CDN
+  polyfill Quarto would otherwise add next to MathJax.
+
 ## Local preview
 
 ```bash
