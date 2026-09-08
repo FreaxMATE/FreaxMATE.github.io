@@ -1,0 +1,15 @@
+% Extra LaTeX preamble for the per-article PDFs (pandoc's default template supplies the rest).
+\usepackage{microtype}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{breakable}
+
+% \begin{callout}{Title} ... \end{callout}; an empty title gives a plain box
+\tcbset{callout/.style={breakable, enhanced, colback=black!3, colframe=black!35,
+  boxrule=0.5pt, arc=2pt, left=2mm, right=2mm, fonttitle=\bfseries}}
+\NewDocumentEnvironment{callout}{m}
+  {\IfBlankTF{#1}{\begin{tcolorbox}[callout]}{\begin{tcolorbox}[callout, title={#1}]}}
+  {\end{tcolorbox}}
+
+% Slightly tighter figures
+\usepackage{float}
+\floatplacement{figure}{H}

@@ -1,0 +1,43 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [source]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pandoc
+        uses: pandoc/actions/setup@v1
+        with:
+          version: 3.10
+
+      - name: Install TeX Live (for the PDFs)
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y --no-install-recommends \
+            texlive-luatex texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended lmodern
+
+      - name: Inject the domain from the SITE_DOMAIN repository variable
+        if: ${{ vars.SITE_DOMAIN != '' }}
+        run: |
+          sed -i "s|data-domains=\"[^\"]*\"|data-domains=\"${{ vars.SITE_DOMAIN }}\"|" templates/analytics.html
+          echo "SITE_URL=https://${{ vars.SITE_DOMAIN }}" >> "$GITHUB_ENV"
+
+      - name: Build
+        run: make all SITE_URL="${SITE_URL:-https://freaxmate.github.io/website}"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_site
+          cname: ${{ vars.SITE_DOMAIN }}
+          force_orphan: true

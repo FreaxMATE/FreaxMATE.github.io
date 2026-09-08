@@ -1,87 +1,73 @@
 # website
 
-Konstantin Unruh's personal site: notes on physics, Linux and more.
-Built with [Quarto](https://quarto.org/) and published to GitHub Pages.
+Konstantin Unruh's notes on physics, Linux and more. Plain HTML built with
+pandoc and a Makefile; every article is also available as a PDF.
 
-
-## Layout
+## How it works
 
 ```
 .
-├── _quarto.yml          # Site config: nav, footer, formats, theme layering
-├── _brand.yml           # Colours (light + dark) and fonts, applied everywhere
-├── styles/site.scss     # Custom styling on top of Bootstrap + brand
-├── index.qmd            # Homepage (custom layout, hero, latest articles)
-├── _templates/          # EJS template for the homepage article list
-├── assets/              # Starfield script, favicon
-├── _includes/           # analytics.html (Umami snippet)
-├── docs/
-│   ├── physics/         # index.qmd is an auto-generated listing
-│   └── linux/
-└── .github/workflows/   # Render + deploy on push to `source`
+├── Makefile               # the build: articles → HTML + PDF, then index + feed
+├── style.css              # the whole design, ~70 lines, no JavaScript
+├── index.md               # homepage intro; the article list is generated
+├── templates/
+│   ├── page.html          # HTML skeleton (header, nav, footer)
+│   ├── preamble.tex       # extra LaTeX preamble for the PDFs (callout boxes)
+│   └── analytics.html     # Umami snippet; domain injected by CI
+├── scripts/
+│   ├── index.py           # homepage list + feed.xml from front matter
+│   ├── katex-prerender.js # pandoc filter: equations → HTML at build time
+│   └── callouts.lua       # pandoc filter: callout divs → LaTeX boxes
+├── katex/                 # KaTeX CSS + fonts, self-hosted
+├── physics/<slug>/index.md, img/
+├── linux/<slug>/index.md, img/
+└── .github/workflows/pages.yml
 ```
+
+Visitors' browsers load only this site's own files plus the Umami script.
+Equations are rendered by KaTeX during the build, so no math library ships.
 
 ## Writing an article
 
-Create `docs/<section>/<slug>.qmd` and put images in `docs/<section>/<slug>-img/`:
+Create `<section>/<slug>/index.md` (any top-level folder works; the homepage
+lists everything by date) and put images in `<section>/<slug>/img/`:
 
-```yaml
+```markdown
 ---
 title: "Article title"
-date: 2026-09-06
-description: "One sentence shown in listings and link previews."
-categories: ["Physics"]          # section tag shown on the homepage
-image: my-article-img/feature.jpg  # optional, shown on the section page
-format:
-  html: default
-  pdf: default                    # adds an "Other Formats: PDF" link
+date: 2026-09-07
+description: "One sentence shown on the homepage and in the feed."
 ---
+
+Text with $inline$ and $$display$$ math, images as ![Caption](img/figure.png),
+and callouts as fenced divs:
+
+::: {.callout-note title="Heads up"}
+Rendered as a box in HTML and in the PDF.
+:::
 ```
 
-Section pages and the homepage pick the article up automatically.
-Python code cells run at render time and are cached under `_freeze/`.
+Add `draft: true` to keep an article out of the homepage and feed.
 
-## No third-party requests
+A LaTeX source is also possible: pandoc reads `.tex` (`pandoc -f latex`),
+so a `<slug>/index.tex` can be wired in with a second Makefile rule.
 
-Visitors' browsers talk only to this site (and Umami, see below):
-
-- Fonts: Fira Sans and Fira Code are self-hosted from `assets/fonts/`
-  (fontsource builds), declared as `@font-face` in `styles/site.scss`.
-  `_brand.yml` marks them `source: system` so Quarto links no font service.
-- Math: MathJax 3 and its fonts are vendored under `assets/mathjax/`;
-  `html-math-method.url` in `_quarto.yml` points there.
-- `scripts/strip-remote.py` runs after each render and removes the CDN
-  polyfill Quarto would otherwise add next to MathJax.
-
-## Local preview
+## Building locally
 
 ```bash
-nix develop          # or install quarto + uv yourself
-uv sync
-quarto preview
+nix develop          # pandoc, make, node, python3, TeX Live
+make html            # HTML only, fast
+make                 # HTML + PDFs
+make serve           # http://localhost:8000
 ```
-
-`quarto render --to html` skips the PDF builds if you have no LaTeX installed.
-
-Note: the `quarto` package in nixpkgs currently ships a pandoc that is too old
-for Quarto 1.10 ("Unknown option syntax-highlighting"). If `nix develop`
-fails that way, use the official tarball from the Quarto releases page instead.
 
 ## Deployment
 
-Pushing to `source` runs `.github/workflows/gh-pages.yml`, which installs
-Quarto with TinyTeX, renders the site, and publishes `_site/` to the
-`gh-pages` branch.
-
-The custom domain is not stored in this repository. It lives in the
-`SITE_DOMAIN` Actions variable (repo Settings, Secrets and variables, Actions).
-CI patches `site-url` and writes the `CNAME` file from it at build time.
-
-## Analytics
-
-Page views are counted with [Umami Cloud](https://cloud.umami.is) (open
-source, cookie-free, no consent banner needed). The snippet lives in
-`_includes/analytics.html` and only tracks the production domain.
+Pushing to `source` runs `.github/workflows/pages.yml`: installs pandoc and
+TeX Live, runs `make`, publishes `_site/` to the `gh-pages` branch as a single
+commit. The custom domain is not stored in this repository; it lives in the
+`SITE_DOMAIN` Actions variable and is injected into the feed URLs, the
+analytics snippet and the `CNAME` file at build time.
 
 ## License
 

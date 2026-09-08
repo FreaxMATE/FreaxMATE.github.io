@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="$lang$">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$if(title)$$title$ · $endif$Konstantin Unruh</title>
+$if(description)$<meta name="description" content="$description$">$endif$
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Konstantin Unruh" href="/feed.xml">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/katex/katex.min.css">
+$for(header-includes)$
+$header-includes$
+$endfor$
+</head>
+<body>
+<header class="site">
+  <a class="name" href="/">Konstantin Unruh</a>
+  <nav>
+    <a href="https://github.com/FreaxMATE">GitHub</a>
+    <a href="/feed.xml">RSS</a>
+  </nav>
+</header>
+<main>
+$if(title)$
+<article>
+<h1>$title$</h1>
+<p class="meta">$if(date)$<time datetime="$date$">$date$</time>$endif$$if(pdf)$ · <a href="$pdf$">PDF</a>$endif$</p>
+$body$
+</article>
+$else$
+$body$
+$endif$
+</main>
+<footer class="site">
+  <span>© 2022–2026 Konstantin Unruh</span>
+  <span><a href="https://github.com/FreaxMATE/website">Source</a></span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* The whole design. Colours follow the OS light/dark preference; no JavaScript. */
+:root {
+  --bg: #fbf9f6; --fg: #1c1512; --muted: #6b5d55; --line: #e6ddd5; --accent: #b8532f; --code: #f1ece6;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #12100e; --fg: #f1ebe6; --muted: #a99c93; --line: #2c2621; --accent: #f1b179; --code: #1c1815; }
+}
+
+html { font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--fg); }
+body { max-width: 50rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+a { color: var(--accent); }
+
+header.site, footer.site { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1rem; font-size: .9rem; }
+header.site { padding-bottom: 1rem; border-bottom: 1px solid var(--line); margin-bottom: 2.5rem; }
+header.site .name { color: var(--fg); font-weight: 600; text-decoration: none; }
+header.site nav a { color: var(--muted); text-decoration: none; margin-left: 1rem; }
+header.site nav a:hover { color: var(--fg); }
+footer.site { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); }
+footer.site a { color: var(--muted); }
+
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+h2 { font-size: 1.3rem; margin-top: 2.5rem; }
+h3 { font-size: 1.05rem; margin-top: 2rem; }
+.meta { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+p, li { max-width: 78ch; }
+
+img { max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border-radius: 4px; }
+figure { margin: 1.5rem 0; }
+figcaption { text-align: center; color: var(--muted); font-size: .85rem; margin-top: -1rem; }
+
+code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .88em; background: var(--code); padding: .1em .35em; border-radius: 3px; }
+pre { background: var(--code); padding: .9rem 1rem; overflow-x: auto; border-radius: 4px; }
+pre code { background: none; padding: 0; }
+blockquote { margin: 1.5rem 0; padding: .25rem 1rem; border-left: 3px solid var(--line); color: var(--muted); }
+table { border-collapse: collapse; margin: 1.5rem 0; }
+th, td { text-align: left; padding: .35rem .7rem; border-bottom: 1px solid var(--line); }
+
+/* equations, pre-rendered by KaTeX at build time */
+.katex { font-size: 1.05em; }
+.katex-display { margin: 1.25rem 0; overflow-x: auto; overflow-y: hidden; padding: .25rem 0; }
+
+/* callouts: fenced divs with a title attribute */
+div[class^="callout"] { border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 4px; padding: .75rem 1rem; margin: 1.5rem 0; }
+div[class^="callout"][title]::before { content: attr(title); display: block; font-weight: 600; margin-bottom: .4rem; }
+
+/* homepage */
+.intro { margin-bottom: 1rem; }
+.year { color: var(--muted); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; margin: 2rem 0 .25rem; }
+ul.posts { list-style: none; padding: 0; margin: 0; }
+ul.posts li { display: flex; gap: 1.25rem; padding: .5rem 0; border-bottom: 1px solid var(--line); }
+ul.posts time { color: var(--muted); font-variant-numeric: tabular-nums; flex: 0 0 6.5rem; font-size: .9rem; padding-top: .1rem; }
+ul.posts small { display: block; color: var(--muted); font-size: .88rem; }
+@media (max-width: 480px) { ul.posts li { flex-direction: column; gap: .1rem; } }

@@ -1,5 +1,5 @@
 {
-  description = "FreaxMATE website (Quarto)";
+  description = "Personal website: pandoc + make";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -12,11 +12,11 @@
   in {
     devShells."${system}".default = pkgs.mkShell {
       packages = with pkgs; [
-        quarto
         pandoc
-        texliveFull
-        python311
-        uv
+        gnumake
+        nodejs
+        python3
+        texliveMedium   # lualatex, tcolorbox, microtype, fontspec
       ];
     };
   };

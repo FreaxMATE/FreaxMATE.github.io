@@ -1,28 +1,16 @@
-# Quarto build artifacts
+# build output
 _site/
-_freeze/
-.quarto/
-*.html
-!_includes/*.html
-.Rhistory
-.Rproj.user/
 
-# Local-only archive of the old Hugo site (not part of the repository)
-_archive/
-
-# LaTeX side products from PDF rendering
+# LaTeX side files, should any be produced next to a source
 *.aux
 *.log
-*.tex
+*.out
+*.toc
 *.fls
 *.fdb_latexmk
+*.synctex.gz
 
-# Python artifacts
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-**/*.quarto_ipynb
-.venv/
-uv.lock
-
-/.quarto/
+# editors and OS
+.DS_Store
+*~
+.direnv/
