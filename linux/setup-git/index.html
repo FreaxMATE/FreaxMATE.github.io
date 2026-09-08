@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setting up git SSH/GPG with Github · Konstantin Unruh</title>
+<meta name="description" content="Authenticate pushes and sign commits
+when interacting with GitHub.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Konstantin Unruh" href="/feed.xml">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/katex/katex.min.css">
+<!-- Umami Cloud analytics (open source, cookie-free). data-domains is replaced by
+     CI with the SITE_DOMAIN variable, so local builds never send anything. -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="139aec24-39c4-4253-b010-6fc9ed38da19" data-domains="konstantinunruh.com"></script>
+</head>
+<body>
+<header class="site">
+  <a class="name" href="/">Konstantin Unruh</a>
+  <nav>
+    <a href="https://github.com/FreaxMATE">GitHub</a>
+    <a href="/feed.xml">RSS</a>
+  </nav>
+</header>
+<main>
+<article>
+<h1>Setting up git SSH/GPG with Github</h1>
+<p class="meta"><time datetime="2022-03-14">2022-03-14</time> · <a href="index.pdf">PDF</a></p>
+<h2 id="overview">Overview</h2>
+<p>Git is a free and open source code version control system. It was
+originally developed by Linus Torvalds himself with the first release
+back in 2005. SSH and GPG are quite interesting for the use with git
+however there are not many easy guides on how to set these up. So here
+is a compact article.</p>
+<h2 id="get-started">Get Started</h2>
+<p>When trying to create your first commit git wants to know some info
+about you:</p>
+<pre><code>Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email &quot;you@example.com&quot;
+  git config --global user.name &quot;Your Name&quot;
+
+to set your account&#39;s default identity.
+Omit --global to set the identity only in this repository.
+</code></pre>
+<p>So obviously follow the instructions and configure your email and
+name with:</p>
+<pre><code>git config --global user.email &quot;you@example.com&quot;
+git config --global user.name &quot;Your Name&quot;</code></pre>
+<h2 id="gpg-key">GPG key</h2>
+<p>First you can install the seahorse app, a password &amp; encryption
+key manager. Using Arch Linux or Manjaro you can do that with:</p>
+<pre><code>sudo pacman -S seahorse</code></pre>
+<p>Then add a GPG key.</p>
+<figure>
+<img src="img/gpg1.png" alt="Create GPG key" />
+<figcaption aria-hidden="true">Create GPG key</figcaption>
+</figure>
+<p>Enter a name, and the same email address that you use for your Github
+account.</p>
+<figure>
+<img src="img/gpg2.png" alt="Configure GPG key" />
+<figcaption aria-hidden="true">Configure GPG key</figcaption>
+</figure>
+<p>After entering the passphrase for this key export the public key.</p>
+<figure>
+<img src="img/gpg3.png" alt="Export Public key" />
+<figcaption aria-hidden="true">Export Public key</figcaption>
+</figure>
+<p>Copy the content of the exported file, sign in to your Github account
+and go to <strong>Settings-&gt;SSH and GPG keys-&gt;New GPG key</strong>
+and paste the public key there.</p>
+<p>Now go back to seahorse and copy the key ID from the properties
+dialog of your GPG key (double click on the key). Then you need to tell
+Git about your GPG key with:</p>
+<pre><code>git config --global user.signingkey &lt;KEY_ID&gt;</code></pre>
+<p><em>(replace &lt;KEY_ID&gt; with your actual key ID)</em></p>
+<p><strong>Finished!</strong> 💪 🎊</p>
+<p>From now on you can sign your commits with:</p>
+<pre><code>git commit -S -m &quot;Hooray I can sign my commits&quot;</code></pre>
+<h2 id="ssh-key">SSH key</h2>
+<p>Using SSH you do not have to enter your token or password every time
+you push a commit to github. In seahorse click <strong>+</strong> then
+select <em>Secure Shell key</em>. Enter a brief description then click
+<em>Create and set up</em> and enter a passphrase. To get the public
+double click on the ssh key to get to the properties dialog. There is a
+Copy icon next to the <em>Public Key</em> label. After clicking it your
+public key is saved in your clipboard. All you have to do now is adding
+your SSH key to Github. Therefore sign in to your Github account and go
+to <strong>Settings-&gt;SSH and GPG keys-&gt;New SSH key</strong>. There
+you have a title and copy your public key in the box below.</p>
+<p><strong>Great!</strong> 🎉 If you want to force git to always use SSH
+instead of HTTPS you can do that with:</p>
+<pre><code>git config --global url.&quot;git@github.com:&quot;.insteadOf &quot;https://github.com/&quot;</code></pre>
+<p><strong>I hoped this post helped you! Happy coding!</strong></p>
+<h2 id="sources">Sources</h2>
+</article>
+</main>
+<footer class="site">
+  <span>© 2022–2026 Konstantin Unruh</span>
+  <span><a href="https://github.com/FreaxMATE/website">Source</a></span>
+</footer>
+</body>
+</html>

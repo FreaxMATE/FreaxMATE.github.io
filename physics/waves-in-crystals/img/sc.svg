@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   width="400"
+   height="300"
+   viewBox="0 0 400 300"
+   id="svg2"
+   sodipodi:docname="sc.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.171482"
+     inkscape:cx="126.76251"
+     inkscape:cy="82.374289"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4" />
+  <metadata
+     id="metadata44">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs42" />
+  <g
+     id="g3789">
+    <g
+       transform="translate(25,-10)"
+       id="g4"
+       style="stroke:#000000;stroke-opacity:1">
+      <rect
+         width="200"
+         height="200"
+         x="25"
+         y="25"
+         id="rect6"
+         style="fill:#ffffff;fill-opacity:0.7;stroke:#000000;stroke-width:3;stroke-opacity:1" />
+      <path
+         d="M 225,225 V 25 l 100,50 v 200 z"
+         id="path8"
+         style="fill:#ffffff;fill-opacity:0.7;stroke:#000000;stroke-width:3;stroke-opacity:1" />
+      <path
+         d="M 225,225 H 25 l 100,50 h 200 z"
+         id="path10"
+         style="fill:#ffffff;fill-opacity:0.7;stroke:#000000;stroke-width:3;stroke-opacity:1" />
+      <circle
+         cx="225"
+         cy="225"
+         r="6"
+         id="circle12"
+         style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+      <rect
+         width="200"
+         height="200"
+         x="125"
+         y="75"
+         id="rect14"
+         style="fill:#ffffff;fill-opacity:0.7;stroke:#000000;stroke-width:3;stroke-opacity:1" />
+      <path
+         d="M 125,75 V 275 L 25,225 V 25 z"
+         id="path16"
+         style="fill:#ffffff;fill-opacity:0.7;stroke:#000000;stroke-width:3;stroke-opacity:1" />
+      <path
+         d="M 125,75 H 325 L 225,25 H 25 z"
+         id="path18"
+         style="fill:#ffffff;fill-opacity:0.7;stroke:#000000;stroke-width:3;stroke-opacity:1" />
+      <circle
+         cx="25"
+         cy="25"
+         r="6"
+         id="circle20"
+         style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+      <circle
+         cx="225"
+         cy="25"
+         r="6"
+         id="circle22"
+         style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+      <circle
+         cx="125"
+         cy="75"
+         r="6"
+         id="circle24"
+         style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+      <circle
+         cx="325"
+         cy="75"
+         r="6"
+         id="circle26"
+         style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+      <circle
+         cx="25"
+         cy="225"
+         r="6"
+         id="circle28"
+         style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+      <circle
+         cx="125"
+         cy="275"
+         r="6"
+         id="circle30"
+         style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+      <circle
+         cx="325"
+         cy="275"
+         r="6"
+         id="circle32"
+         style="fill:#000000;stroke:#000000;stroke-opacity:1" />
+    </g>
+    <text
+       x="100"
+       y="275"
+       id="text34"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Sans;-inkscape-font-specification:Sans">a</text>
+    <text
+       x="250"
+       y="295"
+       id="text36"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Sans;-inkscape-font-specification:Sans">a</text>
+    <text
+       x="375"
+       y="175"
+       id="text38"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Sans;-inkscape-font-specification:Sans">a</text>
+  </g>
+</svg>

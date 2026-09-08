@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Konstantin Unruh</title>
+  <link>https://konstantinunruh.com/</link>
+  <description>Notes on physics, Linux and more.</description>
+  <language>en</language>
+  <lastBuildDate>Tue, 08 Sep 2026 09:57:24 +0000</lastBuildDate>
+  <atom:link href="https://konstantinunruh.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Waves in Crystals</title>
+    <link>https://konstantinunruh.com/physics/waves-in-crystals/</link>
+    <guid>https://konstantinunruh.com/physics/waves-in-crystals/</guid>
+    <pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate>
+    <description>How do waves scatter in crystal structures. This article covers the basics of lattices, Miller indices, reciprocal lattice as well as the Laue conditions and the structure factor.</description>
+  </item>
+  <item>
+    <title>Adiabatic Compression</title>
+    <link>https://konstantinunruh.com/physics/adiabatic-compression/</link>
+    <guid>https://konstantinunruh.com/physics/adiabatic-compression/</guid>
+    <pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate>
+    <description>How to derive the formulas of an adiabatic compression.</description>
+  </item>
+  <item>
+    <title>Setting up git SSH/GPG with Github</title>
+    <link>https://konstantinunruh.com/linux/setup-git/</link>
+    <guid>https://konstantinunruh.com/linux/setup-git/</guid>
+    <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+    <description>Authenticate pushes and sign commits when interacting with GitHub.</description>
+  </item>
+  <item>
+    <title>Making Manjaro The Flagship MATE Distro</title>
+    <link>https://konstantinunruh.com/linux/manjaro-mate/</link>
+    <guid>https://konstantinunruh.com/linux/manjaro-mate/</guid>
+    <pubDate>Thu, 03 Mar 2022 00:00:00 +0000</pubDate>
+    <description>Manjaro MATE edition with Ayatana Indicators and additional enhancements 🎉 🎊</description>
+  </item>
+</channel>
+</rss>

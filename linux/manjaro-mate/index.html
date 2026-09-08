@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making Manjaro The Flagship MATE
+Distro · Konstantin Unruh</title>
+<meta name="description" content="Manjaro MATE edition with Ayatana
+Indicators and additional enhancements 🎉 🎊">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Konstantin Unruh" href="/feed.xml">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/katex/katex.min.css">
+<!-- Umami Cloud analytics (open source, cookie-free). data-domains is replaced by
+     CI with the SITE_DOMAIN variable, so local builds never send anything. -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="139aec24-39c4-4253-b010-6fc9ed38da19" data-domains="konstantinunruh.com"></script>
+</head>
+<body>
+<header class="site">
+  <a class="name" href="/">Konstantin Unruh</a>
+  <nav>
+    <a href="https://github.com/FreaxMATE">GitHub</a>
+    <a href="/feed.xml">RSS</a>
+  </nav>
+</header>
+<main>
+<article>
+<h1>Making Manjaro The Flagship MATE Distro</h1>
+<p class="meta"><time datetime="2022-03-03">2022-03-03</time> · <a href="index.pdf">PDF</a></p>
+<p>Hi there 👋,</p>
+<p>welcome to my new website, this is my first post here 🎉 - It is
+about a customized Manjaro MATE ISO I created.</p>
+<p>My favorite desktop environment currently is the MATE Desktop,
+however especially for new users it is not a very user-friendly
+implementation in most distributions. So I personally always configured
+the stock MATE experience to make it much more usable and polished. But
+actually you should not have to do so much to get an acceptable
+experience out of a desktop environment.</p>
+<p>A Distribution doing a great job with their MATE Edition is Ubuntu
+MATE. I used to run this Distribution but much more prefer Manjaro/ Arch
+Linux as the backend. That’s why I changed to Manjaro MATE and they’re
+definitely better than some other Distribution with the MATE Desktop but
+not quite as good as Ubuntu MATE. So I created a customized Manjaro MATE
+ISO 🎉 🎊</p>
+<hr />
+<h1 id="features">Features</h1>
+<h2 id="ayatana-indicators">Ayatana Indicators</h2>
+<figure>
+<img src="img/ayatana.gif" alt="Ayatana Indicators" />
+<figcaption aria-hidden="true">Ayatana Indicators</figcaption>
+</figure>
+<p>The most important change of the new Manjaro MATE Spin is the
+integration of <a href="https://github.com/AyatanaIndicators">Ayatana
+Indicators</a>. They describe the project as follows:</p>
+<blockquote>
+<p>Application Indicators are a GNOME implementation of the
+StatusNotifierItem Specification (SNI) that was originally submitted to
+freedesktop.org by KDE. The Ayatana Indicator project intends to become
+the new upstream for application indicators and associated projects with
+a focus on making Ayatana Indicators a desktop agnostic technology.</p>
+</blockquote>
+<p>They have some great advantages compared to the default MATE
+Notification Area:</p>
+<ol type="1">
+<li>Consistent sharp rendering of status icons</li>
+<li><a href="https://wiki.archlinux.org/title/MPRIS">MPRIS</a>-support
+for controlling media players</li>
+<li>Calendar Synchronization with <a
+href="https://help.gnome.org/users/evolution/stable/">Evolution</a></li>
+<li>Notification manager</li>
+</ol>
+<h2 id="pipewire">Pipewire</h2>
+<p>The default sound system included in the ISO is <a
+href="https://pipewire.org/">Pipewire</a></p>
+<blockquote>
+<p>PipeWire is a project that aims to greatly improve handling of audio
+and video under Linux. It provides a low-latency, graph based processing
+engine on top of audio and video devices that can be used to support the
+use cases currently handled by both pulseaudio and JACK. PipeWire was
+designed with a powerful security model that makes interacting with
+audio and video devices from containerized applications easy, with
+supporting Flatpak applications being the primary goal. Alongside
+Wayland and Flatpak we expect PipeWire to provide a core building block
+for the future of Linux application development.</p>
+<ul>
+<li>Capture and playback of audio and video with minimal latency.</li>
+<li>Real-time Multimedia processing on audio and video.</li>
+<li>Multiprocess architecture to let applications share multimedia
+content.</li>
+<li>Seamless support for PulseAudio, JACK, ALSA and GStreamer
+applications.</li>
+<li>Sandboxed applications support. See Flatpak for more info.</li>
+</ul>
+</blockquote>
+<p>To be in full control of your audio streams the minimal patchbay <a
+href="https://gitlab.freedesktop.org/pipewire/helvum">Helvum</a> has
+been included</p>
+<figure>
+<img src="img/helvum.png" alt="Helvum" />
+<figcaption aria-hidden="true">Helvum</figcaption>
+</figure>
+<h2 id="classy-curated-apps">Classy curated apps</h2>
+<figure>
+<img src="img/apps.jpg" alt="Apps" />
+<figcaption aria-hidden="true">Apps</figcaption>
+</figure>
+<p>The main applications included in the ISO are not surprising but some
+nice apps were included.</p>
+<p>The default Browser is of course <a
+href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>. As a
+default Office Suite the robust <a
+href="https://www.libreoffice.org/">Libre Office</a> is shipped with the
+beautiful <a
+href="https://github.com/ubuntu/libreoffice-style-yaru-fullcolor">Libreoffice
+style Yaru</a> icon theme. Coming to Multimedia: <a
+href="https://celluloid-player.github.io/">Celluloid</a> is the default
+video player and <a
+href="https://wiki.gnome.org/Apps/Rhythmbox">Rhythmbox</a> as a music
+player. Celluloid defaults to the classic window border layout and
+Rhythmbox is pimped with the the <a
+href="https://github.com/fossfreedom/alternative-toolbar">Alternative
+Toolbar Plugin</a>.</p>
+<figure>
+<img src="img/rhythm-cell.png" alt="Celluloid and Rhythmbox" />
+<figcaption aria-hidden="true">Celluloid and Rhythmbox</figcaption>
+</figure>
+<p>To organize your Mails the GTK-based <a
+href="https://help.gnome.org/users/evolution/stable/">Evolution</a>
+E-Mail client is shipped, providing integration with the Ayatana
+Calendar Indicator.</p>
+<p>Instead of the rather slow stock MATE search tool, the powerful <a
+href="https://github.com/cboxdoerfer/fsearch">FSearch</a> is here to let
+you search for files instantaneously and fast.</p>
+<p>For the security of your accounts the password manager <a
+href="https://gitlab.gnome.org/World/PasswordSafe">Secrets</a> and <a
+href="https://wiki.gnome.org/Apps/Seahorse/">Seahorse</a> is installed
+by default.</p>
+<p>The default shell is <a href="https://fishshell.com/">Fish</a>, to
+make the command line more approachable for new Linux users and more
+efficient for all users.</p>
+<p><a href="https://github.com/FreaxMATE/mate-layouts">MATE Layouts</a>
+(based on <a href="https://github.com/ubuntu-mate/mate-tweak">MATE
+Tweak</a>) lets you quickly switch between different panel layouts to
+get a user experience similar to Windows, Mac, the old Unity or simply
+the productive Gnome 2 Layout which is the default one.</p>
+<figure>
+<img src="img/gnome.jpg" alt="Gnome 2 Layout" />
+<figcaption aria-hidden="true">Gnome 2 Layout</figcaption>
+</figure>
+<figure>
+<img src="img/cupertino.jpg" alt="Cupertino Layout" />
+<figcaption aria-hidden="true">Cupertino Layout</figcaption>
+</figure>
+<figure>
+<img src="img/redmond.jpg" alt="Redmond Layout" />
+<figcaption aria-hidden="true">Redmond Layout</figcaption>
+</figure>
+<figure>
+<img src="img/mutiny.jpg" alt="Mutiny Layout" />
+<figcaption aria-hidden="true">Mutiny Layout</figcaption>
+</figure>
+<h2 id="app-plugins">App Plugins</h2>
+<p>For Caja there is now by default the <a
+href="https://github.com/infirit/caja-admin">caja-admin</a> plugin
+installed. So you can open directories or edit root files as
+administrator.</p>
+<p>Additionally for the text editor Pluma the official MATE package <a
+href="https://github.com/mate-desktop/pluma-plugins">pluma-plugins</a>
+is now included by default. This transforms Pluma to a usable IDE with
+some plugins like bracket and word completion, quickhighlight, and
+source-code browser:</p>
+<figure>
+<img src="img/pluma.gif" alt="Pluma" />
+<figcaption aria-hidden="true">Pluma</figcaption>
+</figure>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="themes">Themes</h3>
+<p>The default theme is now the slick looking <a
+href="https://github.com/vinceliuice/Matcha-gtk-theme">Matcha-dark-pueril</a>
+theme in a MATE green style, which I <a
+href="https://github.com/vinceliuice/Matcha-gtk-theme/pull/174">helped
+creating</a>. Especially for this theme I created a custom green styled
+<a href="https://github.com/FreaxMATE/papirus-mate-icon-theme">Papirus
+Folders</a> for the used <a
+href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme">Papirus
+Icon Theme</a>.</p>
+<p>For Pluma and the <a
+href="https://github.com/mate-desktop/mate-terminal">MATE Terminal</a>
+there is a new elegant and consistent theme:</p>
+<figure>
+<img src="img/theme-pluma.jpg" alt="Theme Pluma" />
+<figcaption aria-hidden="true">Theme Pluma</figcaption>
+</figure>
+<figure>
+<img src="img/theme-terminal.jpg" alt="Theme Terminal" />
+<figcaption aria-hidden="true">Theme Terminal</figcaption>
+</figure>
+<p>As you saw in these pictures the default font across the whole
+desktop is <a href="https://github.com/tonsky/FiraCode">Fira
+Code</a>.</p>
+<h3 id="wallpapers">Wallpapers</h3>
+<p>Here are some of the wallpapers included in the ISO:</p>
+<figure>
+<img src="img/john-towner-3Kv48NS4WUU-unsplash.jpg"
+alt="John Towner - Unsplash" />
+<figcaption aria-hidden="true">John Towner - Unsplash</figcaption>
+</figure>
+<figure>
+<img src="img/marina-montoya-bqkmKInb_9E-unsplash.jpg"
+alt="Marina Montoya - Unsplash" />
+<figcaption aria-hidden="true">Marina Montoya - Unsplash</figcaption>
+</figure>
+<figure>
+<img src="img/paul-scherer-1mAqQGg6FwI-unsplash.jpg"
+alt="Paul Scherer - Unsplash" />
+<figcaption aria-hidden="true">Paul Scherer - Unsplash</figcaption>
+</figure>
+<figure>
+<img src="img/scott-carroll-qKcglCaZtTA-unsplash.jpg"
+alt="Scott Carroll - Unsplash" />
+<figcaption aria-hidden="true">Scott Carroll - Unsplash</figcaption>
+</figure>
+<h2 id="download-iso">Download ISO</h2>
+<div class="callout-important">
+<p>You can download the ISO <a
+href="https://github.com/FreaxMATE/manjaro-iso-build/releases">here</a></p>
+</div>
+<div class="callout-note">
+<p>The ISO consists of two files because GitHub cannot handle files
+larger than 2 GB. You can find the guide on how to merge them in the <a
+href="https://github.com/FreaxMATE/manjaro-iso-build">README</a></p>
+</div>
+<h2 id="future-ideas">Future Ideas</h2>
+<ul>
+<li>Set <a href="https://wiki.archlinux.org/title/Picom">Picom</a> as
+default compositor</li>
+</ul>
+</article>
+</main>
+<footer class="site">
+  <span>© 2022–2026 Konstantin Unruh</span>
+  <span><a href="https://github.com/FreaxMATE/website">Source</a></span>
+</footer>
+</body>
+</html>
